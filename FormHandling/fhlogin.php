@@ -34,7 +34,7 @@ if(isset($_POST['submit'])) {
                     $_SESSION['jabatan'] = $row['jabatan'];
                     $_SESSION['namaSp'] = $row['nama_spesialisasi'];
                     $_SESSION['foto'] = $row['foto'];
-                    header("location: ../pages/viewdata/dataStatistik.php?login=success");
+                    header("location: ../pages/viewdata/dataStatistik.php?id_karyawan=".$_SESSION['idK']."");
                     exit();
 //                }
             }
