@@ -37,7 +37,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
         $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
         if($sql){ // Cek jika proses simpan ke database sukses atau tidak
             // Jika Sukses, Lakukan :
-            header("location: C:xampp\htdocs\GitHub\klinikB\viewData\dataDokter.php"); // Redirect ke halaman index.php
+            header("location: http://localhost/GitHub/klinikB/viewData/dataDokter.php");
         }else{
             // Jika Gagal, Lakukan :
             echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
@@ -55,7 +55,8 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
     $sql = mysqli_query($conn, $query); // Eksekusi/ Jalankan query dari variabel $query
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
         // Jika Sukses, Lakukan :
-        header("location: C:\xampp\htdocs\GitHub\klinikB\viewData\dataDokter.php"); // Redirect ke halaman index.php
+        // Redirect ke halaman index.php
+        header("location: http://localhost/GitHub/klinikB/viewData/dataDokter.php");
     }else{
         // Jika Gagal, Lakukan :
         echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";

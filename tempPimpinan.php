@@ -6,12 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="topnav">
-    <a class="active" href="statistik.php">Statistik Klinik</a>
-    <a href="viewData/dataDokter.php">Dokter</a>
-    <a href="viewData/dataPasien.php">Pasien</a>
-    <a href="daftarCatatan.php">Cari Data</a>
-</div>
 <div id="pageBar">
     <div class="sidenav">
             <img id="fotoProfil" src="img/user.png" alt="fotoDokter">
@@ -24,6 +18,8 @@
             </div>
     </div>
 </div>
+
+
 
 <div>
 
