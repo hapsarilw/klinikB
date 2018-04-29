@@ -36,23 +36,51 @@
                 <br>
 
                 Nama Dokter: <br>
+
                 <select id="namaD" name="namaD" required>
                     <option value="none">None</option>
-                    <option value="">&nbsp;</option>
+                    <?php
+                    $namaSp = $_POST['jenisSP'];
+                    
+                    $query = "SELECT * FROM # where jenis_spesialisasi = '$namaSp'"; 
+                    $sql = mysqli_query($conn, $query); 
+
+                    while($data = mysqli_fetch_array($sql)){ 
+                        echo "<option value=''>".$data['nama_dokter']."</option>";
+                    }
+                    ?>
                 </select>
                 <br>
 
                 Hari Pertemuan: <br>
                 <select id="hari_pertemuan" name="hariPertemuan" required>
                     <option value="none">None</option>
-                    <option value="">&nbsp;</option>
+                    <?php
+                    $namaD = $_POST['namaD'];
+                    
+                    $query = "SELECT * FROM # where nama_dokter = '$namaD'"; 
+                    $sql = mysqli_query($conn, $query); 
+
+                    while($data = mysqli_fetch_array($sql)){ 
+                        echo "<option value=''>".$data['hariPertemuan']."</option>";
+                    }
+                    ?>
                 </select>
                 <br>
 
                 Jam Pertemuan: <br>
                 <select id="jam_pertemuan" name="jamPertemuan" required>
                     <option value="none">None</option>
-                    <option value="">&nbsp;</option>
+                    <?php
+                    $hariPertemuan = $_POST['hariPertemuan'];
+                    
+                    $query = "SELECT * FROM # where hariPertemuan = '$hariPertemuan'"; 
+                    $sql = mysqli_query($conn, $query); 
+
+                    while($data = mysqli_fetch_array($sql)){ 
+                        echo "<option value=''>".$data['hariPertemuan']."</option>";
+                    }
+                    ?>
                 </select>
                 <br>
 

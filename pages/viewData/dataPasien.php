@@ -29,13 +29,13 @@
                 // Load file koneksi.php
                 include "../../dbConnect.php";
 
-                $query = "SELECT * FROM pasien"; // Query untuk menampilkan semua data siswa
-                $sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
+                $query = "SELECT * FROM pasien";
+                $sql = mysqli_query($conn, $query); 
                 
                 $query2 = "select * from hasil_konsultasi";
                 $sql2 = mysqli_query($conn, $query2);
 
-                while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
+                while($data = mysqli_fetch_array($sql)){
                     echo "<tr>";
                     echo "<td>".$data['id_pasien']."</td>";
                     echo "<td>".$data['nama_pasien']."</td>";

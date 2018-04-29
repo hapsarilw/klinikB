@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+include '../../dbconnect.php';
+?>
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="../../styles/doktor.css">
@@ -9,10 +14,12 @@
         <div id="pageBar">
             <div class="sidenav">
                 <img id="fotoProfil" src="../../img/user.png" alt="fotoDokter">
-                <p id="namaD">Nama Pimpinan</p>
-                <p>ID Dokter</p>
-                <p>Pimpinan</p>
-                <p>Email</p>
+                <?php
+                echo "<p id='namaD'>".$_SESSION['namaK']."</p>";
+                echo "<p id='namaD'>".$_SESSION['idK']."</p>";
+                echo "<p id='namaD'>".$_SESSION['jabatan']."</p>";
+                echo "<p id='namaD'>".$_SESSION['email']."</p>";
+                ?>
                 <div id="logout">
                     <form action="../logout.php" method="post">
                         <a name="submit">

@@ -31,10 +31,10 @@
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        $query = "SELECT * FROM karyawan"; // Query untuk menampilkan semua data siswa
-        $sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
+        $query = "SELECT * FROM karyawan";
+        $sql = mysqli_query($conn, $query);
 
-        while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
+        while($data = mysqli_fetch_array($sql)){ 
             echo "<tr>";
             echo "<td><img src='/imgDokter".$data['foto']."' width='100' height='100'></td>";
             echo "<td>".$data['id_karyawan']."</td>";

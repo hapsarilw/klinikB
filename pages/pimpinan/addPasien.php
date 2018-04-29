@@ -16,6 +16,10 @@
         </div>
         <div class="content">
             <h1>Tambah Data Pasien</h1>
+            <?php
+                include '../pasien/pendaftaranpasien.php';
+            ?>
+<!--
             <form action="../../formhandling/fhdaftarpasien.php" method="post">
                 Nama Lengkap: <br>
                 <input type="text" name="namaP" value="" required><br>
@@ -55,6 +59,7 @@
 
                 <input type="submit" class="button" style="width:75px;" value="Lanjut">
             </form>
+-->
         </div>
     </body>
 </html>
