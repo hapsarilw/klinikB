@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="../../styles/doktor.css">
     <script type="text/javascript" src="../../styles/doktor.js"></script>
     <?php
-    include('../../styles/tempPimpinan.php');?>
+    include('../pimpinan/tempPimpinan.php');?>
 </head>
 <body>
 <div class="topnav">
