@@ -8,6 +8,7 @@ $id_p = $_GET['id_pasien'];
 $namaP = $_POST['namaP'];
 $emailP = $_POST['emailP'];
 $namaSp = $_POST['jenisSP'];
+$namaD = $_POST['namaD'];
 $tglPertemuan = $_POST['tglPertemuan'];
 $jamPertemuan = $_POST['jamPertemuan'];
 

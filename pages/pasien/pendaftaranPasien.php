@@ -15,7 +15,7 @@
         ?>
         <div class="maincontainer">
             <h1>Form Pendaftaran Pasien</h1>
-            <form action="../formhandling/fhdaftarpasien#.php" method="post">
+            <form action="../../formhandling/fhdaftarpasien.php" method="post">
                 Nama Lengkap: <br>
                 <input type="text" name="namaP" value="" required><br>
 
