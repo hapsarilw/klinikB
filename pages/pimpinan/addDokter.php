@@ -58,9 +58,12 @@
 
                 <hr>
                 <input type="submit" value="Simpan">
-                
                 <!--benerin tombol batal jadi button-->
+<<<<<<< HEAD
 <!--                <a href="addDokter.php"><input type="submit" value="Batal"></a>-->
+=======
+                <a href="../viewData/dataDokter.php"><input type="button" value="Batal"></
+>>>>>>> 82d46f518c9b4d0d939794533058be61786ec00e
             </form>
         </div>
     </body>
