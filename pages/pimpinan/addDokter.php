@@ -15,7 +15,7 @@
             <a href="../dokter/daftarCatatan.php">Cari Data</a>
         </div>
         <div class="content">
-            <h1>Tambah Data Siswa</h1>
+            <h1>Tambah Data Dokter</h1>
             <form method="post" action="../../FormHandling/fhDokter.php" enctype="multipart/form-data">
                 <table cellpadding="8">
                     <tr>

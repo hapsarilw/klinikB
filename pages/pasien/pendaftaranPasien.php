@@ -42,8 +42,12 @@
                 </select>
                 <br>
 
-                Tanggal Pertemuan: <br>
-                <input id="hari_pertemuan" type="date" name="tglPertemuan" required> <br>
+                Hari Pertemuan: <br>
+                <select id="hari_pertemuan" name="hariPertemuan" required>
+                    <option value="none">None</option>
+                    <option value="">&nbsp;</option>
+                </select>
+                <br>
 
                 Jam Pertemuan: <br>
                 <select id="jam_pertemuan" name="jamPertemuan" required>
