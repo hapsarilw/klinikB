@@ -43,14 +43,9 @@
             echo "<td>".$data['password']."</td>";
             echo "<td>".$data['nama_spesialisasi']."</td>";
             echo "<td>".$data['jabatan']."</td>";
-<<<<<<< HEAD:pages/viewData/dataDokter.php
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
-=======
-            echo "<td><a href='../Form/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
-            echo "<td><a href='../Form/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
-            echo "<td><a href='../Form/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Jam<br>Praktek</a></td>";
->>>>>>> 9363bdc117dd738604de0d2e23b14f458ff90d1c:viewData/dataDokter.php
+            echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Jam<br>Praktek</a></td>";
             echo "</tr>";
         }
         ?>
