@@ -1,5 +1,5 @@
 <head>
-    <?php include '../../styles/tempPimpinan.php' ?>
+    <?php include '../pimpinan/tempPimpinan.php' ?>
     <title>Daftar Catatan | Dokter</title>
 </head>
 <body>
