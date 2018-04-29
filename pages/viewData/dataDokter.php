@@ -45,7 +45,7 @@
             echo "<td>".$data['jabatan']."</td>";
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
-            echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Jam<br>Praktek</a></td>";
+            echo "<td><a href='dataJadwalPraktek.php?id_karyawan=".$data['id_karyawan']."'>Jam<br>Praktek</a></td>";
             echo "</tr>";
         }
         ?>

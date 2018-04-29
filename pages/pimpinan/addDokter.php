@@ -15,7 +15,7 @@
             <a href="../dokter/daftarCatatan.php">Cari Data</a>
         </div>
         <div class="content">
-            <h1>Tambah Data Siswa</h1>
+            <h1>Tambah Data Dokter</h1>
             <form method="post" action="../../FormHandling/fhDokter.php" enctype="multipart/form-data">
                 <table cellpadding="8">
                     <tr>
@@ -58,9 +58,8 @@
 
                 <hr>
                 <input type="submit" value="Simpan">
-                
                 <!--benerin tombol batal jadi button-->
-                <a href="addDokter.php"><input type="submit" value="Batal"></a>
+                <a href="../viewData/dataDokter.php"><input type="button" value="Batal"></
             </form>
         </div>
     </body>
