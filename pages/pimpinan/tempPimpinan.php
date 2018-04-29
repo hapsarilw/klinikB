@@ -18,7 +18,7 @@ include '../../dbconnect.php';
                 echo "<p id='namaD'>".$_SESSION['namaK']."</p>";
                 echo "<p id='namaD'>".$_SESSION['idK']."</p>";
                 echo "<p id='namaD'>".$_SESSION['jabatan']."</p>";
-                echo "<p id='namaD'>".$_SESSION['email']."</p>";
+                echo "<p id='namaD'>".$_SESSION['emailK']."</p>";
                 ?>
                 <div id="logout">
                     <form action="../logout.php" method="post">

@@ -17,6 +17,7 @@ $query = "INSERT INTO pasien(nama_pasien, email, noTelp)
 $sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
 if($sql){ 
     header("location: ../pages/viewData/dataPasien.php");
+    exit();
 }else{
     echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
     echo "<br><a href='fhDaftarPasien.php'>Kembali Ke Form</a>";
