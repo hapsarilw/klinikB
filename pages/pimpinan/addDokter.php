@@ -60,7 +60,7 @@
                 <input type="submit" value="Simpan">
                 
                 <!--benerin tombol batal jadi button-->
-                <a href="addDokter.php"><input type="submit" value="Batal"></a>
+<!--                <a href="addDokter.php"><input type="submit" value="Batal"></a>-->
             </form>
         </div>
     </body>
