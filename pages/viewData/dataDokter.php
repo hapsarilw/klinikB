@@ -36,7 +36,7 @@
 
         while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
             echo "<tr>";
-            echo "<td><img src='imgDokter".$data['foto']."' width='100' height='100'></td>";
+            echo "<td><img src='/imgDokter".$data['foto']."' width='100' height='100'></td>";
             echo "<td>".$data['id_karyawan']."</td>";
             echo "<td>".$data['nama_karyawan']."</td>";
             echo "<td>".$data['email']."</td>";

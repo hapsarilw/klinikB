@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    cursor: pointer;
+    margin:5px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: grey;
+}
+
+.maincontainer {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
