@@ -7,7 +7,7 @@
 
 <?php
 // Load file koneksi.php
-include "../dbConnect.php";
+include "../../dbConnect.php";
 
 // Ambil data NIS yang dikirim oleh index.php melalui URL
 $idK = $_GET['id_karyawan'];
@@ -18,7 +18,7 @@ $sql = mysqli_query($conn, $query);  // Eksekusi/Jalankan query dari variabel $q
 $data = mysqli_fetch_array($sql); // Ambil data dari hasil eksekusi $sql
 ?>
 
-<form method="post" action="../FormHandling/fhUbahDokter.php?id_karyawan=<?php echo $idK; ?>" enctype="multipart/form-data">
+<form method="post" action="../../FormHandling/fhUbahDokter.php?id_karyawan=<?php echo $idK; ?>" enctype="multipart/form-data">
     <table cellpadding="8">
         <tr>
             <td>Nama Karyawab</td>

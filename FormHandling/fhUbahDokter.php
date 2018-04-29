@@ -29,7 +29,7 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
         $data = mysqli_fetch_array($sql); // Ambil data dari hasil eksekusi $sql
         // Cek apakah file foto sebelumnya ada di folder images
         if(is_file("imgDokter/".$data['foto'])) // Jika foto ada
-            unlink("imaDokter/".$data['foto']); // Hapus file foto sebelumnya yang ada di folder images
+            unlink("imgDokter/".$data['foto']); // Hapus file foto sebelumnya yang ada di folder images
 
         // Proses ubah data ke Database
         $query = "UPDATE karyawan SET nama_karyawan='".$nama_karyawan."', email='".$email."', password='".$password."', 
@@ -37,16 +37,16 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
         $sql = mysqli_query($connect, $query); // Eksekusi/ Jalankan query dari variabel $query
         if($sql){ // Cek jika proses simpan ke database sukses atau tidak
             // Jika Sukses, Lakukan :
-            header("location: http://localhost/GitHub/klinikB/viewData/dataDokter.php");
+            header("location: http://localhost/GitHub/klinikB/pages/viewData/dataDokter.php");
         }else{
             // Jika Gagal, Lakukan :
             echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
-            echo "<br><a href='/viewData/dataDokter.php'>Kembali Ke Form</a>";
+            echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
         }
     }else{
         // Jika gambar gagal diupload, Lakukan :
         echo "Maaf, Gambar gagal untuk diupload.";
-        echo "<br><a href='/viewData/dataDokter.php'>Kembali Ke Form</a>";
+        echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
     }
 }else{ // Jika user tidak menceklis checkbox yang ada di form ubah, lakukan :
     // Proses ubah data ke Database
@@ -56,11 +56,11 @@ if(isset($_POST['ubah_foto'])){ // Jika user menceklis checkbox yang ada di form
     if($sql){ // Cek jika proses simpan ke database sukses atau tidak
         // Jika Sukses, Lakukan :
         // Redirect ke halaman index.php
-        header("location: http://localhost/GitHub/klinikB/viewData/dataDokter.php");
+        header("location: http://localhost/GitHub/klinikB/pages/viewData/dataDokter.php");
     }else{
         // Jika Gagal, Lakukan :
         echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
-        echo "<br><a href='/viewData/dataDokter.php'>Kembali Ke Form</a>";
+        echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
     }
 }
 ?>
