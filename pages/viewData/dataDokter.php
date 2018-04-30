@@ -18,7 +18,6 @@
     <a href="../pimpinan/addDokter.php">Tambah Data</a><br><br>
     <table border="1" width="100%">
         <tr>
-            <th>Foto</th>
             <th>ID Karyawan</th>
             <th>Nama</th>
             <th>Email</th>
@@ -31,20 +30,17 @@
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        $query = "SELECT * FROM karyawan where jabatan='Dokter'";
+        $query = "SELECT id_karyawan, nama_karyawan, email, password, jenis_spesialisasi FROM viewspesialisasidokter";
         $sql = mysqli_query($conn, $query);
 
-        $query = "SELECT * FROM spesialisasi where nama_karyawan='.$data[].'";
-        $sql = mysqli_query($conn, $query);
+        while($data = mysqli_fetch_array($sql)){
 
-        while($data = mysqli_fetch_array($sql)){ 
             echo "<tr>";
-            echo "<td><img src='/imgDokter".$data['foto']."' width='100' height='100'></td>";
             echo "<td>".$data['id_karyawan']."</td>";
             echo "<td>".$data['nama_karyawan']."</td>";
             echo "<td>".$data['email']."</td>";
             echo "<td>".$data['password']."</td>";
-            echo "<td>".$data['id_spesialisasi']."</td>";
+            echo "<td>".$data['jenis_spesialisasi']."</td>";
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
             echo "</tr>";
@@ -52,6 +48,5 @@
         ?>
     </table>
 </div>
-
 </body>
 </html>
