@@ -335,3 +335,6 @@ input[type=submit]:hover {
     border: 1px solid black;
     border-collapse: collapse;
 }
+#jadwalPraktek1 th{
+    align="left": left;
+}

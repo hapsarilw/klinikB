@@ -16,10 +16,12 @@ if(isset($_POST['formSubmit']))
     $jamMulai = (String)$jam2[0];
 
     if(substr("$jamMulai", 3, 5)=="00"){
-        $jamSelesai = substr("$jamMulai", 0, 3)."30";
+        $jamSelesai = substr("$jamMulai", 0, 3)+".30";
     }
     else{
-        $jamSelesai = substr("$jamMulai", 0, 3)."00";
+        $jamSelesai = (int)substr("$jamMulai", 0, 2);
+        $jamSelesai = $jamSelesai+1;
+        $jamSelesai = "".$jamSelesai.".00";
     }
 
     $query = "INSERT INTO jadwal_praktek(jam_mulai,jam_selesai,hari,id_karyawan) 

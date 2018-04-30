@@ -45,7 +45,11 @@
 //            echo "<td>".$data['jabatan']."</td>";
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
+<<<<<<< HEAD
 //            echo "<td><a href='dataJadwalPraktek.php?id_karyawan=".$data['id_karyawan']."'>Jam<br>Praktek</a></td>";
+=======
+
+>>>>>>> c4eba1e79ef4c74634e2b581eb886a5a082e36ae
             echo "</tr>";
         }
         ?>
