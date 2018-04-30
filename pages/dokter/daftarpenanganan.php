@@ -8,9 +8,9 @@
     </head>
     <body>
         <div class="topnav">
-            <a class="active" href="">Daftar Penanganan</a>
-            <a href="">Atur Jadwal</a>
-            <a href="">Daftar Catatan Pasien</a>
+            <a class="active" href="daftarpenanganan.php">Daftar Penanganan</a>
+            <a href="aturJadwalPraktek.php">Atur Jadwal</a>
+            <a href="daftarcatatanpasien.php">Daftar Catatan Pasien</a>
         </div>
         <div class="content" >
             <h1>Cari Data Pasien</h1>
