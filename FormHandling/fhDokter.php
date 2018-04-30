@@ -20,6 +20,7 @@ if(move_uploaded_file($tmp, $path)){
     $query = "INSERT INTO karyawan(nama_karyawan, email, password, nama_spesialisasi, jabatan, foto) 
               VALUES('".$namaK."', '".$email."', '".$password."', '".$namaSp."','".$jabatan."', '".$fotobaru."')";
     $sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
+
     if($sql){ 
         header("location: ../pages/viewData/dataDokter.php");
     }else{

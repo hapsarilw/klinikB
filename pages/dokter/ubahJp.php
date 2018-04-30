@@ -1,13 +1,13 @@
 <html>
 <head>
-    <title>Tambah Dokter</title>
+    <title>Ubah Jadwal Praktek</title>
     <link rel="stylesheet" type="text/css" href="../../styles/doktor.css">
     <script type="text/javascript" src="../../styles/doktor.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
     <?php
-        include('tempPimpinan.php');
-        // Load file koneksi.php
-        include "../../dbConnect.php";
+    include('../pimpinan/tempPimpinan.php');
+    // Load file koneksi.php
+    include "../../dbConnect.php";
     ?>
 
 </head>
@@ -19,41 +19,42 @@
     <a href="../dokter/daftarCatatan.php">Cari Data</a>
 </div>
 <div class="content">
-    <h1>Tambah Jadwal Praktek</h1>
+    <h1>Ubah Jadwal Praktek</h1>
     <?php
 
-        // Ambil data NIS yang dikirim oleh index.php melalui URL
-        $idK = $_GET['id_karyawan'];
+    // Ambil data NIS yang dikirim oleh index.php melalui URL
+    $idK = $_SESSION['idK'];
+    $idJP = $_GET['id_jadwalPraktek'];
 
-        // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
-        $query1 = "SELECT id_karyawan, nama_karyawan, nama_spesialisasi FROM karyawan WHERE id_karyawan='".$idK."'";
-        $sql1 = mysqli_query($conn, $query1);  // Eksekusi/Jalankan query dari variabel $query
-        $data1 = mysqli_fetch_array($sql1); // Ambil data dari hasil eksekusi $sql
+    // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
+    $query1 = "SELECT id_karyawan, nama_karyawan, nama_spesialisasi FROM karyawan WHERE id_karyawan='".$idK."'";
+    $sql1 = mysqli_query($conn, $query1);  // Eksekusi/Jalankan query dari variabel $query
+    $data1 = mysqli_fetch_array($sql1); // Ambil data dari hasil eksekusi $sql
     ?>
 
-        <table>
-            <tr>
-                <td>Nama Karyawan</td>
-                <td><?php echo " : ". $data1['nama_karyawan']?></td>
+    <table id="jadwalPraktek1">
+        <tr>
+            <?php
+                $query2 = "SELECT * FROM jadwal_praktek WHERE id_jadwalPraktek='".$idJP."'";
+                $sql2 = mysqli_query($conn, $query2);  // Eksekusi/Jalankan query dari variabel $query
+                $data2 = mysqli_fetch_array($sql2); // Ambil data dari hasil eksekusi $sql
+            ?>
+            <th align="left">Hari Praktek Saat Ini</th>
+            <td> : <?php echo ucfirst($data2['hari']); ?></td>
 
-            </tr>
-            <tr>
-                <td>Spesialisasi</td>
-                <td><?php echo " : ". $data1['nama_spesialisasi']?></td>
-            </tr>
-        </table>
-        <h4>Jadwal Baru</h4>
-    <form method="post" action="../../FormHandling/fhJP.php?id_karyawan=<?php echo $idK?>" enctype="multipart/form-data">
-        <p style="width: 100px;white-space: nowrap;">
-            <input style="background-color:#555555;" type="button" value="Add" onclick="addRowToTable();" />
-            <input style="background-color:#555555;"  type="button" value="Remove" onclick="removeRowFromTable();" />
-            <input style="background-color:#555555;"  type="button" value="Submit" onclick="validateRow(this.form);" />
-            <input style="background-color:#555555;"  type="checkbox" id="chkValidate" /> Validate Submit
-        </p>
-        <p>
-            <input type="checkbox" id="chkValidateOnKeyPress" checked="checked" /> Display OnKeyPress
-            <span id="spanOutput" style="border: 1px solid #000; padding: 3px;"> </span>
-        </p>
+        </tr>
+        <tr>
+            <th align="left">Jam Mulai Praktek Saat Ini</th>
+            <td> : <?php echo $data2['jam_mulai']; ?></td>
+        </tr>
+        <tr>
+            <th align="left">Jam Selesai Praktek Saat Ini</th>
+            <td> : <?php echo $data2['jam_selesai']; ?></td>
+        </tr>
+    </table>
+    <h4>Jadwal Baru</h4>
+    <form method="post" action="../../FormHandling/fhUbah.php?id_jadwalPraktek=<?php echo $data2['id_jadwalPraktek']?>" enctype="multipart/form-data">
+
         <table id="jadwalPraktek">
             <tr>
                 <th colspan="3">Jadwal Praktek</th>
@@ -62,7 +63,7 @@
                 <td rowspan="2">1</td>
                 <td>Hari</td>
                 <td>
-                    <label for='hari[]'>Select the countries that you have visited:</label><br>
+                    <label for='hari[]'></label><br>
                     <select multiple="multiple" name="hari[]">
                         <option value="senin">Senin</option>
                         <option value="selasa">Selasa</option>
@@ -77,7 +78,7 @@
             <tr>
                 <td>Jam</td>
                 <td>
-                    <label for='jam[]'>Select the countries that you have visited:</label><br>
+                    <label for='jam[]'></label><br>
                     <select multiple="multiple" name="jam[]">
                         <option value="10.00">10.00</option>
                         <option value="10.30">10.30</option>

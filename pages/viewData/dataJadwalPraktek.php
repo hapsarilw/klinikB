@@ -8,11 +8,15 @@
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        $idK = $_GET['id_karyawan'];
+        $idK = $_SESSION['idK'];
 
         $query1 = "SELECT * FROM karyawan WHERE id_karyawan='".$idK."'";
         $sql1 = mysqli_query($conn, $query1);
-        $data1 = mysqli_fetch_array($sql1); 
+        $data1 = mysqli_fetch_array($sql1);
+
+        $query2 = "SELECT * FROM jadwal_praktek WHERE id_karyawan='".$idK."'";
+        $sql2 = mysqli_query($conn, $query2);
+        $data2 = mysqli_fetch_array($sql2);
     ?>
 </head>
 <body>
@@ -34,7 +38,7 @@
             <td><?php echo " : " .$data1['nama_spesialisasi']?></td>
         </tr>
     </table>
-    <a href="../pimpinan/addJP.php?id_karyawan=<?php echo $idK; ?>">Tambah Jadwal</a><br><br>
+    <a href="../dokter/addJP.php?id_karyawan=<?php echo $idK; ?>">Tambah Jadwal</a><br><br>
     <table border="1" width="100%">
         <tr>
             <th>Hari</th>
@@ -54,8 +58,8 @@
             echo "<td>".$data['hari']."</td>";
             echo "<td>".$data['jam_mulai']."</td>";
             echo "<td>".$data['jam_selesai']."</td>";
-            echo "<td><a href='../pimpinan/ubahJP.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
-            echo "<td><a href='../pimpinan/hapusJP.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
+            echo "<td><a href='../dokter/ubahJP.php?id_karyawan=".$data['id_karyawan']." && id_jadwalPraktek=".$data2['id_jadwalPraktek']."'>Ubah</a></td>";
+            echo "<td><a href='../dokter/hapusJP.php?id_karyawan=".$data['id_karyawan']."&& id_jadwalPraktek=".$data2['id_jadwalPraktek']."'>Hapus</a></td>";
             echo "</tr>";
         }
         ?>
