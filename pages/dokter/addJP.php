@@ -26,7 +26,7 @@
         $idK = $_SESSION['idK'];
 
         // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
-        $query1 = "SELECT id_karyawan, nama_karyawan, nama_spesialisasi FROM karyawan WHERE id_karyawan='".$idK."'";
+        $query1 = "SELECT id_karyawan, nama_karyawan, id_spesialisasi FROM karyawan WHERE id_karyawan='".$idK."'";
         $sql1 = mysqli_query($conn, $query1);  // Eksekusi/Jalankan query dari variabel $query
         $data1 = mysqli_fetch_array($sql1); // Ambil data dari hasil eksekusi $sql
     ?>
@@ -39,7 +39,7 @@
             </tr>
             <tr>
                 <td>Spesialisasi</td>
-                <td><?php echo " : ". $data1['nama_spesialisasi']?></td>
+                <td><?php echo " : ". $data1['id_spesialisasi']?></td>
             </tr>
         </table>
         <h4>Jadwal Baru</h4>

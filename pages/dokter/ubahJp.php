@@ -27,9 +27,7 @@
     $idJP = $_GET['id_jadwalPraktek'];
 
     // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
-    $query1 = "SELECT id_karyawan, nama_karyawan, nama_spesialisasi FROM karyawan WHERE id_karyawan='".$idK."'";
-    $sql1 = mysqli_query($conn, $query1);  // Eksekusi/Jalankan query dari variabel $query
-    $data1 = mysqli_fetch_array($sql1); // Ambil data dari hasil eksekusi $sql
+
     ?>
 
     <table id="jadwalPraktek1">
@@ -45,15 +43,15 @@
         </tr>
         <tr>
             <th align="left">Jam Mulai Praktek Saat Ini</th>
-            <td> : <?php echo $data2['jam_mulai']; ?></td>
+            <td> <p value="jam_selesai">: <?php echo $data2['jam_mulai']; ?></p></td>
         </tr>
         <tr>
             <th align="left">Jam Selesai Praktek Saat Ini</th>
-            <td> : <?php echo $data2['jam_selesai']; ?></td>
+            <td> <p value="jam_mulai">: <?php echo $data2['jam_selesai']; ?></p></td>
         </tr>
     </table>
     <h4>Jadwal Baru</h4>
-    <form method="post" action="../../FormHandling/fhUbah.php?id_jadwalPraktek=<?php echo $data2['id_jadwalPraktek']?>" enctype="multipart/form-data">
+    <form method="post" action="../../FormHandling/fhUbahJP.php?id_jadwalPraktek=<?php echo $data2['id_jadwalPraktek']?>" enctype="multipart/form-data">
 
         <table id="jadwalPraktek">
             <tr>
@@ -64,7 +62,7 @@
                 <td>Hari</td>
                 <td>
                     <label for='hari[]'></label><br>
-                    <select multiple="multiple" name="hari[]">
+                    <select name="hari[]">
                         <option value="senin">Senin</option>
                         <option value="selasa">Selasa</option>
                         <option value="rabu">Rabu</option>
@@ -79,7 +77,7 @@
                 <td>Jam</td>
                 <td>
                     <label for='jam[]'></label><br>
-                    <select multiple="multiple" name="jam[]">
+                    <select name="jam[]">
                         <option value="10.00">10.00</option>
                         <option value="10.30">10.30</option>
                         <option value="11.00">11.00</option>

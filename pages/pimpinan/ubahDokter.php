@@ -46,19 +46,19 @@
                         <td>Nama Spesialisasi</td>
                         <td>
                             <?php
-                            if($data['nama_spesialisasi'] == "Gigi dan Mulut"){
+                            if($data['id_spesialisasi'] == "1"){
                                 echo"<input type='radio' name='nama_spesialisasi' value='Gigi dan Mulut' checked='checked'> Gigi dan Mulut";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Kandungan'> Kandungan";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Penyakit Dalam'> Penyakit Dalam";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Tulang'> Tulang";
                             }
-                            else if($data['nama_spesialisasi'] == "Kandungan"){
+                            else if($data['id_spesialisasi'] == "2"){
                                 echo"<input type='radio' name='nama_spesialisasi' value='Gigi dan Mulut' checked='checked'> Gigi dan Mulut";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Kandungan'> Kandungan";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Penyakit Dalam'> Penyakit Dalam";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Tulang'> Tulang";
                             }
-                            else if($data['nama_spesialisasi'] == "Penyakit Dalam"){
+                            else if($data['id_spesialisasi'] == "Penyakit Dalam"){
                                 echo"<input type='radio' name='nama_spesialisasi' value='Gigi dan Mulut' checked='checked'> Gigi dan Mulut";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Kandungan'> Kandungan";
                                 echo"<input type='radio' name='nama_spesialisasi' value='Penyakit Dalam'> Penyakit Dalam";
@@ -73,31 +73,6 @@
                             ?>
                         </td>
 
-                    </tr>
-
-                    <tr>
-                        <td>Jabatan</td>
-                        <td>
-                            <?php
-                            if($data['nama_spesialisasi'] == "Gigi dan Mulut"){
-                                echo"<input type='radio' name='jabatan' value='Dokter' checked='checked'> Dokter";
-                                echo"<input type='radio' name='jabatan' value='Pimpinan'> Pimpinan";
-                            }
-                            else{
-                                echo"<input type='radio' name='jabatan' value='Dokter' > Dokter";
-                                echo"<input type='radio' name='jabatan' value='Pimpinan' checked='checked'> Pimpinan";
-                            }
-                            ?>
-                        </td>
-
-
-                    </tr>
-                    <tr>
-                        <td>Foto</td>
-                        <td>
-                            <input type="checkbox" name="ubah_foto" value="true"> Saya ingin mengubah foto<br>
-                            <input type="file" name="foto">
-                        </td>
                     </tr>
 
                 </table>

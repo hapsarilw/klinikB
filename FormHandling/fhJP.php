@@ -13,10 +13,12 @@ if(isset($_POST['formSubmit']))
     $jam2 = $_POST['jam'];
 
     $hari = (String)$hari2[0];
+    $jamMulai1 = (String)$jam2[0];
     $jamMulai = (String)$jam2[0];
 
-    if(substr("$jamMulai", 3, 5)=="00"){
-        $jamSelesai = substr("$jamMulai", 0, 3)+".30";
+    if(substr("$jamMulai1", 3, 5)=="00"){
+        $jamSelesai = (int)substr("$jamMulai", 0, 2);
+        $jamSelesai = "".$jamSelesai.".30";
     }
     else{
         $jamSelesai = (int)substr("$jamMulai", 0, 2);

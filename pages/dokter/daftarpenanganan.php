@@ -9,7 +9,7 @@
     <body>
         <div class="topnav">
             <a class="active" href="daftarpenanganan.php">Daftar Penanganan</a>
-            <a href="aturJadwalPraktek.php">Atur Jadwal</a>
+            <a href="../viewData/dataJadwalPraktek.php">Atur Jadwal</a>
             <a href="daftarcatatanpasien.php">Daftar Catatan Pasien</a>
         </div>
         <div class="content" >

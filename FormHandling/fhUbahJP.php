@@ -2,59 +2,50 @@
 // Load file koneksi.php
 include "../dbConnect.php";
 
-$idK = $_GET['id_karyawan'];
+$idJP = $_GET['id_jadwalPraktek'];
 
-$nama_karyawan = $_POST['nama_karyawan'];
-$email = $_POST['email'];
-$password = $_POST['password'];
-$nama_spesialisasi = $_POST['nama_spesialisasi'];
-$jabatan = $_POST['jabatan'];
 
-if(isset($_POST['ubah_foto'])){
+if(isset($_POST['formSubmit']))
+{
+    $hari = $_POST['hari'];
+    $jamMulai2 = $_POST['jam'];
+    $jamMulai1 = $_POST['jam'];
+    $jamMulai = $_POST['jam'];
 
-    $foto = $_FILES['foto']['name'];
-    $tmp = $_FILES['foto']['tmp_name'];
-
-    $fotobaru = date('dmYHis').$foto;
-
-    $path = "imgDokter/".$fotobaru;
-
-    // Proses upload
-    if(move_uploaded_file($tmp, $path)){
-        $query = "SELECT nama_karyawan, email, password, nama_spesialisasi, jabatan, foto FROM karyawan WHERE id_karyawan='".$idK."'";
-        $sql = mysqli_query($connect, $query);
-        $data = mysqli_fetch_array($sql);
-
-        if(is_file("imgDokter/".$data['foto']))
-            unlink("imgDokter/".$data['foto']);
-
-        $query = "UPDATE karyawan SET nama_karyawan='".$nama_karyawan."', email='".$email."', password='".$password."', 
-        nama_spesialisasi='".$nama_spesialisasi."', jabatan='".$jabatan."', foto='".$fotobaru."' WHERE id_karyawan='".$idK."'";
-        $sql = mysqli_query($connect, $query);
-
-        if($sql){
-            //sukses
-            header("location: http://localhost/GitHub/klinikB/pages/viewData/dataDokter.php");
-        }else{
-            //gagal
-            echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
-            echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
-        }
-    }else{
-        echo "Maaf, Gambar gagal untuk diupload.";
-        echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
+    if(substr("$jamMulai1", 3, 5)=="00"){
+        $jamSelesai = (int)substr("$jamMulai", 0, 2);
+        $jamSelesai = "".$jamSelesai.".30";
     }
-}else{
-    $query = "UPDATE karyawan SET nama_karyawan='".$nama_karyawan."', email='".$email."', password='".$password."', 
-        nama_spesialisasi='".$nama_spesialisasi."', jabatan='".$jabatan."' WHERE id_karyawan='".$idK."'";
-    $sql = mysqli_query($conn, $query);
+    else{
+        $jamSelesai = (int)substr("$jamMulai", 0, 2);
+        $jamSelesai = $jamSelesai+1;
+        $jamSelesai = "".$jamSelesai.".00";
+    }
+
+    $query = "INSERT INTO jadwal_praktek(jam_mulai,jam_selesai,hari,id_karyawan) 
+            VALUES('".$jamMulai2."', '".$jamSelesai."', '".$hari."', '".$idK."')";
+    $sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
     if($sql){
-        //sukses
-        header("location: http://localhost/GitHub/klinikB/pages/viewData/dataDokter.php");
-    }else{
-        //gagal
-        echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
-        echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
+        header("location: ../pages/viewData/dataJadwalPraktek.php?id_karyawan=".$idK."");
+    }
+    else{
+        echo "Data Jadwal Praktek tidak masuk";
     }
 }
+
+$query = "UPDATE jadwal_praktek SET hari='".$hari."', jam_mulai='".$jamMulai."', jam_selesai='".$jamSelesai."' 
+WHERE id_jadwalPraktek='".$idJP."'";
+$sql = mysqli_query($connect, $query);
+
+if($sql){
+    //sukses
+    header("location: http://localhost/GitHub/klinikB/pages/viewData/dataDokter.php");
+}else{
+    //gagal
+    echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
+    echo "<br><a href='../pages/viewData/dataDokter.php'>Kembali Ke Form</a>";
+}
+
+
+
 ?>
