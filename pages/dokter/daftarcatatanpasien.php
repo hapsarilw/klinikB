@@ -13,7 +13,8 @@
             <a class="active" href="daftarcatatanpasien.php">Daftar Catatan Pasien</a>
         </div>
         <div class="content" >
-            <h1>Tambah Catatan Pasien</h1>
+            <h1>Catatan Pasien</h1>
+            <a href="adddaftarcatatan.php">Tambah Data</a><br><br>
             
         </div>
 
