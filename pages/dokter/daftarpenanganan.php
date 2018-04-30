@@ -8,10 +8,9 @@
     </head>
     <body>
         <div class="topnav">
-            <a href="dataStatistik.php">Statistik Klinik</a>
-            <a href="dataDokter.php">Dokter</a>
-            <a href="dataPasien.php">Pasien</a>
-            <a class="active" href="daftarCatatan.php">Cari Data</a>
+            <a class="active" href="">Daftar Penanganan</a>
+            <a href="">Atur Jadwal</a>
+            <a href="">Daftar Catatan Pasien</a>
         </div>
         <div class="content" >
             <h1>Cari Data Pasien</h1>
