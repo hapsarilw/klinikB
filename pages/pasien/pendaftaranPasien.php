@@ -31,11 +31,15 @@
 
                 Jenis Spesialisasi Dokter: <br>
                 <select id="jenisSP" name="jenisSP" required>
-                    <option value="none">None</option>
-                    <option value="penyakitdalam">Penyakit Dalam</option>
-                    <option value="umum">Umum</option>
-                    <option value="kandungan">Kandungan</option>
-                    <option value="anak">Anak</option>
+                    <?php
+                                
+                    $query = "SELECT jenis_spesialisasi FROM spesialisasi"; 
+                    $sql = mysqli_query($conn, $query); 
+
+                    while($data = mysqli_fetch_array($sql)){ 
+                        echo "<option value=''>".$data['jenis_spesialisasi']."</option>";
+                    }
+                    ?>
                 </select>
                 <br>
 
@@ -46,11 +50,11 @@
                     <?php
                     $namaSp = $_POST['jenisSP'];
                     
-                    $query = "SELECT * FROM # where jenis_spesialisasi = '$namaSp'"; 
+                    $query = "SELECT nama_karyawan FROM viewspesialisasidokter where jenis_spesialisasi = '$namaSp'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        echo "<option value=''>".$data['nama_dokter']."</option>";
+                        echo "<option value=''>".$data['nama_karyawan']."</option>";
                     }
                     ?>
                 </select>
@@ -62,11 +66,11 @@
                     <?php
                     $namaD = $_POST['namaD'];
                     
-                    $query = "SELECT * FROM # where nama_dokter = '$namaD'"; 
+                    $query = "SELECT hari FROM viewjpdokter where nama_karyawan = '$namaD'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        echo "<option value=''>".$data['hariPertemuan']."</option>";
+                        echo "<option value=''>".$data['hari']."</option>";
                     }
                     ?>
                 </select>
@@ -78,11 +82,14 @@
                     <?php
                     $hariPertemuan = $_POST['hariPertemuan'];
                     
-                    $query = "SELECT * FROM # where hariPertemuan = '$hariPertemuan'"; 
+                    $query = "SELECT jam_mulai, jam_selesai FROM viewjpdokter where hariPertemuan = '$hariPertemuan'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        echo "<option value=''>".$data['hariPertemuan']."</option>";
+                        $data1 = $data['jam_mulai'];
+                        $data2 = $data['jam_selesai'];
+                        $jam = $data1.'-'.$data2;
+                        echo "<option value=''>".$jam."</option>";
                     }
                     ?>
                 </select>
