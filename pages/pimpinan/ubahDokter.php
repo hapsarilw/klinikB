@@ -1,27 +1,25 @@
 <html>
 <head>
-    <title>Aplikasi CRUD dengan PHP</title>
+    <title></title>
 </head>
 <body>
-<h1>Ubah Data Siswa</h1>
+<h1>Ubah Data Dokter</h1>
 
 <?php
 // Load file koneksi.php
 include "../../dbConnect.php";
 
-// Ambil data NIS yang dikirim oleh index.php melalui URL
 $idK = $_GET['id_karyawan'];
 
-// Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
 $query = "SELECT * FROM karyawan WHERE id_karyawan='".$idK."'";
-$sql = mysqli_query($conn, $query);  // Eksekusi/Jalankan query dari variabel $query
-$data = mysqli_fetch_array($sql); // Ambil data dari hasil eksekusi $sql
+$sql = mysqli_query($conn, $query); 
+$data = mysqli_fetch_array($sql); 
 ?>
 
 <form method="post" action="../../FormHandling/fhUbahDokter.php?id_karyawan=<?php echo $idK; ?>" enctype="multipart/form-data">
     <table cellpadding="8">
         <tr>
-            <td>Nama Karyawab</td>
+            <td>Nama Karyawan</td>
             <td><input type="text" name="nama_karyawan" value="<?php echo $data['nama_karyawan']; ?>"></td>
         </tr>
         <tr>
