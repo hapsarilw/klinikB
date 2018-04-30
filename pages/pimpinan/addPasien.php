@@ -12,7 +12,7 @@
             <a href="../viewData/dataStatistik.php">Statistik Klinik</a>
             <a href="../viewData/dataDokter.php">Dokter</a>
             <a class="active" href="../viewData/dataPasien.php">Pasien</a>
-            <a href="../dokter/daftarCatatan.php">Cari Data</a>
+            <a href="../pimpinan/lihatdaftarcatatan.php">Daftar Catatan Pasien</a>
         </div>
         <div class="content">
             <h1>Tambah Data Pasien</h1>

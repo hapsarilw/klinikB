@@ -22,21 +22,28 @@ if(isset($_POST['submit'])) {
         } else {
             if($row = mysqli_fetch_assoc($result)) {
                 //dehash pw
-//                $hashedcheck = password_verify($pwK, $row['password']);
-//                if($hashedcheck == false) {
-//                    header("location: ../pages/loginkaryawan.php?login=wrongpw");
-//                    exit();
-//                } elseif($hashedcheck == true) {
-                    //login karyawan
-                    $_SESSION['idK'] = $row['id_karyawan'];
-                    $_SESSION['namaK'] = $row['nama_karyawan'];
-                    $_SESSION['emailK'] = $row['email'];
-                    $_SESSION['jabatan'] = $row['jabatan'];
-                    $_SESSION['namaSp'] = $row['nama_spesialisasi'];
-                    $_SESSION['foto'] = $row['foto'];
+                //                $hashedcheck = password_verify($pwK, $row['password']);
+                //                if($hashedcheck == false) {
+                //                    header("location: ../pages/loginkaryawan.php?login=wrongpw");
+                //                    exit();
+                //                } elseif($hashedcheck == true) {
+                //login karyawan
+                $_SESSION['idK'] = $row['id_karyawan'];
+                $_SESSION['namaK'] = $row['nama_karyawan'];
+                $_SESSION['emailK'] = $row['email'];
+                $_SESSION['jabatan'] = $row['jabatan'];
+                $_SESSION['namaSp'] = $row['nama_spesialisasi'];
+                $_SESSION['foto'] = $row['foto'];
+
+                if($_SESSION['jabatan'] == 'Pimpinan') {
                     header("location: ../pages/viewdata/dataStatistik.php?id_karyawan=".$_SESSION['idK']."");
                     exit();
-//                }
+
+                } else {
+                    header("location: ../pages/dokter/daftarpenanganan.php?id_karyawan=".$_SESSION['idK']."");
+                    exit();
+                }
+                //                }
             }
         }
     }

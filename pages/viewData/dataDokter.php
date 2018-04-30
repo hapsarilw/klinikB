@@ -11,7 +11,7 @@
     <a href="dataStatistik.php">Statistik Klinik</a>
     <a class="active" href="dataDokter.php">Dokter</a>
     <a href="dataPasien.php">Pasien</a>
-    <a href="">Cari Data</a>
+    <a href="../pimpinan/lihatdaftarcatatan.php">Daftar Catatan Pasien</a>
 </div>
 <div class="content" >
     <h1>Data Dokter</h1>
@@ -24,14 +24,14 @@
             <th>Email</th>
             <th>Password</th>
             <th>Spesialisasi</th>
-            <th>Jabatan</th>
+<!--            <th>Jabatan</th>-->
             <th colspan="3">Aksi</th>
         </tr>
         <?php
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        $query = "SELECT * FROM karyawan";
+        $query = "SELECT * FROM karyawan where jabatan='Dokter'";
         $sql = mysqli_query($conn, $query);
 
         while($data = mysqli_fetch_array($sql)){ 
@@ -42,7 +42,7 @@
             echo "<td>".$data['email']."</td>";
             echo "<td>".$data['password']."</td>";
             echo "<td>".$data['nama_spesialisasi']."</td>";
-            echo "<td>".$data['jabatan']."</td>";
+//            echo "<td>".$data['jabatan']."</td>";
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
 

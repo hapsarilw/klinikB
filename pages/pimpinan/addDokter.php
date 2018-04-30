@@ -12,7 +12,7 @@
             <a href="../viewData/dataStatistik.php">Statistik Klinik</a>
             <a class="active" href="../viewData/dataDokter.php">Dokter</a>
             <a href="../viewData/dataPasien.php">Pasien</a>
-            <a href="../dokter/daftarCatatan.php">Cari Data</a>
+            <a href="../pimpinan/lihatdaftarcatatan.php">Daftar Catatan Pasien</a>
         </div>
         <div class="content">
             <h1>Tambah Data Dokter</h1>
@@ -41,15 +41,15 @@
                         </td>
                     </tr>
 
+<!--
                     <tr>
                         <td>Jabatan</td>
                         <td>
                             <input type="radio" name="jabatan" value="Dokter"> Dokter
                             <input type="radio" name="jabatan" value="Pimpinan"> Pimpinan
                         </td>
-
-
                     </tr>
+-->
                     <tr>
                         <td>Foto</td>
                         <td><input type="file" name="foto"></td>

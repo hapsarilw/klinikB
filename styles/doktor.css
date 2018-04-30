@@ -12,6 +12,27 @@ body {
     background-size: cover;
 }
 
+.searchbutton {
+    background-color: lightgray;
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 5px;
+    width: 45px;
+    display: inline-block;
+}
+
+.searchbutton:hover {
+    background-color: antiquewhite;
+}
+
+#searchbox {
+    display: inline;
+}
+
+
 .topnav {
     margin-left: 200px;
     padding-left: 15px;
