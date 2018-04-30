@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39597508-3d96-434b-8894-068eb5b80cc3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pages/dokter/daftarpenanganan.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dokter/daftarpenanganan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/viewData/dataDokter.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/viewData/dataDokter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/doktor.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/doktor.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -71,8 +69,8 @@
       <file leaf-file-name="dataDokter.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/viewData/dataDokter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+            <state relative-caret-position="286">
+              <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -258,12 +256,12 @@
       <updated>1524922128678</updated>
       <workItem from="1524922131276" duration="975000" />
       <workItem from="1524923257464" duration="30713000" />
-      <workItem from="1524992824677" duration="31860000" />
+      <workItem from="1524992824677" duration="32268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63548000" />
+    <option name="totallyTimeSpent" value="63956000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,7 +273,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="0" width="697" height="735" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.33333334" />
@@ -284,7 +282,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3250825" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2244898" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
@@ -568,8 +566,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/viewData/dataDokter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+        <state relative-caret-position="286">
+          <caret line="46" column="57" selection-start-line="46" selection-start-column="57" selection-end-line="46" selection-end-column="57" />
         </state>
       </provider>
     </entry>
