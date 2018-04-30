@@ -8,7 +8,7 @@ $namaK = $_POST['nama_karyawan'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $namaSp = $_POST['nama_spesialisasi'];
-$jabatan = $_POST['jabatan'];
+$jabatan = 'Dokter';
 $foto = $_FILES['foto']['name'];
 $tmp = $_FILES['foto']['tmp_name'];
 

@@ -41,6 +41,7 @@
                         </td>
                     </tr>
 
+<!--
                     <tr>
                         <td>Jabatan</td>
                         <td>
@@ -48,6 +49,7 @@
                             <input type="radio" name="jabatan" value="Pimpinan"> Pimpinan
                         </td>
                     </tr>
+-->
                     <tr>
                         <td>Foto</td>
                         <td><input type="file" name="foto"></td>
