@@ -11,7 +11,7 @@
             <a href="dataStatistik.php">Statistik Klinik</a>
             <a href="dataDokter.php">Dokter</a>
             <a class="active" href="dataPasien.php">Pasien</a>
-            <a href="daftarCatatan.php">Cari Data</a>
+            <a href=".php">Cari Data</a>
         </div>
         <div class="content" >
             <h1>Data Pasien</h1>
@@ -22,7 +22,6 @@
                     <th>Nama</th>
                     <th>Email</th>
                     <th>No. Telepon</th>
-                    <th>Lihat Catatan</th>
                     <th colspan="2">Aksi</th>
                 </tr>
                 <?php
@@ -41,7 +40,6 @@
                     echo "<td>".$data['nama_pasien']."</td>";
                     echo "<td>".$data['email']."</td>";
                     echo "<td>".$data['noTelp']."</td>";
-                    echo "<td><a href='../pimpinan/ubahPasien.php?id_konsultasi=".$data2['id_konsultasi']."'>Lihat</a></td>";
                     echo "<td><a href='../pimpinan/ubahPasien.php?id_pasien=".$data['id_pasien']."'>Ubah</a></td>";
                     echo "<td><a href='../pimpinan/hapusPasien.php?id_pasien=".$data['id_pasien']."'>Hapus</a></td>";
                     echo "</tr>";

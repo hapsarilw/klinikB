@@ -1,27 +1,48 @@
 <html>
     <head>
-        <?php include '../pimpinan/tempPimpinan.php' ?>
-        <title>Daftar Catatan | Dokter</title>
+        <title>Daftar Dokter</title>
+        <link rel="stylesheet" type="text/css" href="../../styles/doktor.css">
+        <script type="text/javascript" src="../../styles/doktor.js"></script>
+        <?php
+        include('../pimpinan/tempPimpinan.php');?>
     </head>
     <body>
-        <div class="main">
-            <p id="info">Daftar Pasien</p>
-            <table id="tabelNotifikasi">
+        <div class="topnav">
+            <a href="dataStatistik.php">Statistik Klinik</a>
+            <a href="dataDokter.php">Dokter</a>
+            <a href="dataPasien.php">Pasien</a>
+            <a class="active" href="daftarCatatan.php">Cari Data</a>
+        </div>
+        <div class="content" >
+            <h1>Cari Data Pasien</h1>
+            <table border="1" width="100%">
                 <tr>
-                    <th>ID Catatan</th>
-                    <th>Nama Pasien</th>
-                    <th>Tanggal Pembuatan</th>
-                    <th>Status</th>
-                    <th>Tindakan</th>
+                    <th>ID Pasien</th>
+                    <th>Nama</th>
+                    <th>Email</th>
+                    <th>No. Telepon</th>
+                    <th colspan="2">Aksi</th>
                 </tr>
-                <tr>
-                    <th>12</th>
-                    <th>Jefta</th>
-                    <th>20 Mei 2018</th>
-                    <th>Baru</th>
-                    <th style="color: darkblue">Lihat Ubah Hapus</th>
-                </tr>
+                <?php
+                // Load file koneksi.php
+                include "../../dbConnect.php";
+                
+                $query = "select * from hasil_konsultasi";
+                $sql = mysqli_query($conn, $query2);
+
+                while($data = mysqli_fetch_array($sql)){
+                    echo "<tr>";
+                    echo "<td>".$data['id_pasien']."</td>";
+                    echo "<td>".$data['nama_pasien']."</td>";
+                    echo "<td>".$data['email']."</td>";
+                    echo "<td>".$data['noTelp']."</td>";
+                    echo "<td><a href='../pimpinan/ubahPasien.php?id_pasien=".$data['id_pasien']."'>Ubah</a></td>";
+                    echo "<td><a href='../pimpinan/hapusPasien.php?id_pasien=".$data['id_pasien']."'>Hapus</a></td>";
+                    echo "</tr>";
+                }
+                ?>
             </table>
         </div>
+
     </body>
 </html>

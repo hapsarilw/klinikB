@@ -17,7 +17,7 @@
         <div class="content">
             <h1>Tambah Data Pasien</h1>
             <?php
-                include '../pasien/pendaftaranpasien.php';
+                include '../pasien/temppendaftaranpasien.php';
             ?>
 <!--
             <form action="../../formhandling/fhdaftarpasien.php" method="post">

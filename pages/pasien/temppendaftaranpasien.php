@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" type="text/css" href="../../styles/main.css">
         <title> Klinik Bersama </title>
     </head>
 
@@ -15,9 +14,6 @@
 
         ?>
         <div class="maincontainer">
-            <a href="../../index.html">
-                <img src="../../img/logopng1.png" style="height: 100px; width: 100px;">
-            </a>
             <h1>Form Pendaftaran Pasien</h1>
             <form action="../../formhandling/fhdaftarpasien.php" method="post">
                 Nama Lengkap: <br>

@@ -8,13 +8,11 @@
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        // Ambil data NIS yang dikirim oleh index.php melalui URL
         $idK = $_GET['id_karyawan'];
 
-        // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
         $query1 = "SELECT * FROM karyawan WHERE id_karyawan='".$idK."'";
-        $sql1 = mysqli_query($conn, $query1);  // Eksekusi/Jalankan query dari variabel $query
-        $data1 = mysqli_fetch_array($sql1); // Ambil data dari hasil eksekusi $sql
+        $sql1 = mysqli_query($conn, $query1);
+        $data1 = mysqli_fetch_array($sql1); 
     ?>
 </head>
 <body>
@@ -22,7 +20,7 @@
     <a href="dataStatistik.php">Statistik Klinik</a>
     <a class="active" href="dataDokter.php">Dokter</a>
     <a href="dataPasien.php">Pasien</a>
-    <a href="daftarCatatan.php">Cari Data</a>
+    <a href="">Cari Data</a>
 </div>
 <div class="content" >
     <h1>Data Jadwal Praktek</h1>
@@ -48,10 +46,10 @@
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        $query = "SELECT * FROM praktekdokter where id_karyawan = ".$idK." "; // Query untuk menampilkan semua data siswa
-        $sql = mysqli_query($conn, $query); // Eksekusi/Jalankan query dari variabel $query
+        $query = "SELECT * FROM praktekdokter where id_karyawan = ".$idK." ";
+        $sql = mysqli_query($conn, $query);
 
-        while($data = mysqli_fetch_array($sql)){ // Ambil semua data dari hasil eksekusi $sql
+        while($data = mysqli_fetch_array($sql)){ 
             echo "<tr>";
             echo "<td>".$data['hari']."</td>";
             echo "<td>".$data['jam_mulai']."</td>";

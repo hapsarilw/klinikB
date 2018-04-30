@@ -18,6 +18,10 @@ session_start();
         include '../styles/mainlayout.php';
         ?>
         <div class="maincontainer">
+            <a href="../index.html">
+                <img src="../img/logopng1.png" style="height: 100px; width: 100px;">
+            </a>
+
             <h1>Karyawan Login</h1>
             <form action="../formhandling/fhlogin.php" method="post">
                 E-mail Karyawan:<br>
@@ -25,7 +29,7 @@ session_start();
                 <br><br>
                 Password:<br>
                 <input id="pwK" type="password" name="pwK" value="">
-                <br><br>
+                <br><br><br>
                 <input type="submit" class="button" name="submit" style="width:75px;" value="Login">
             </form>
         </div>

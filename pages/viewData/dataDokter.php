@@ -11,7 +11,7 @@
     <a href="dataStatistik.php">Statistik Klinik</a>
     <a class="active" href="dataDokter.php">Dokter</a>
     <a href="dataPasien.php">Pasien</a>
-    <a href="daftarCatatan.php">Cari Data</a>
+    <a href="">Cari Data</a>
 </div>
 <div class="content" >
     <h1>Data Dokter</h1>
