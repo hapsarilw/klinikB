@@ -25,7 +25,7 @@
             <th>Password</th>
             <th>Spesialisasi</th>
 <!--            <th>Jabatan</th>-->
-            <th colspan="3">Aksi</th>
+            <th colspan="2">Aksi</th>
         </tr>
         <?php
         // Load file koneksi.php
@@ -48,7 +48,11 @@
 //            echo "<td>".$data['jabatan']."</td>";
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
+<<<<<<< HEAD
+//            echo "<td><a href='dataJadwalPraktek.php?id_karyawan=".$data['id_karyawan']."'>Jam<br>Praktek</a></td>";
+=======
 
+>>>>>>> c4eba1e79ef4c74634e2b581eb886a5a082e36ae
             echo "</tr>";
         }
         ?>
