@@ -16,7 +16,7 @@ $query = "INSERT INTO pasien(nama_pasien, email, noTelp)
               VALUES('".$namaP."','".$emailP."','".$noTelp."')";
 $sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
 if($sql){ 
-    header("location: ../pages/viewData/dataPasien.php");
+    header("location: ../pages/pasien/pendaftaranpasien2.php");
     exit();
 }else{
     echo "Maaf, Terjadi kesalahan saat mencoba untuk menyimpan data ke database.";
