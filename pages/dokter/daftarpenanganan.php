@@ -27,7 +27,7 @@
                 include "../../dbConnect.php";
                 
                 $query = "select * from hasil_konsultasi";
-                $sql = mysqli_query($conn, $query2);
+                $sql = mysqli_query($conn, $query);
 
                 while($data = mysqli_fetch_array($sql)){
                     echo "<tr>";

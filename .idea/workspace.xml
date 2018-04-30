@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39597508-3d96-434b-8894-068eb5b80cc3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/FormHandling/fhUbahJP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/dokter/hapusJp.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/dokter/ubahJp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FormHandling/fhDokter.php" beforeDir="false" afterPath="$PROJECT_DIR$/FormHandling/fhDokter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FormHandling/fhJP.php" beforeDir="false" afterPath="$PROJECT_DIR$/FormHandling/fhJP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FormHandling/fhUbahDokter.php" beforeDir="false" afterPath="$PROJECT_DIR$/FormHandling/fhUbahDokter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/dokter/aturJadwalPraktek.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/pimpinan/addJP.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dokter/addJP.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/dokter/daftarpenanganan.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dokter/daftarpenanganan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/viewData/dataDokter.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/viewData/dataDokter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/viewData/dataJadwalPraktek.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/viewData/dataJadwalPraktek.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/doktor.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/doktor.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,141 +14,97 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.26634148">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="addJP.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/dokter/addJP.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
-                  <folding>
-                    <element signature="n#style#0;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#0;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#1;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#2;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#input#3;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#span#0;n#p#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fhJP.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FormHandling/fhJP.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ubahJp.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/dokter/ubahJp.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1853">
-                  <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ubahDokter.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pages/pimpinan/ubahDokter.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-816">
-                  <caret line="24" column="107" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="107" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hapusJp.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/dokter/hapusJp.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dataJadwalPraktek.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/viewData/dataJadwalPraktek.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="60" column="117" selection-start-line="60" selection-start-column="117" selection-end-line="60" selection-end-column="117" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="tempPimpinan.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/pimpinan/tempPimpinan.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="20" selection-end-column="65" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="ubahJp.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/dokter/ubahJp.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="476">
-                  <caret line="55" column="114" selection-start-line="55" selection-start-column="114" selection-end-line="55" selection-end-column="114" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fhUbahJP.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FormHandling/fhUbahJP.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="524">
-                  <caret line="59" column="2" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="doktor.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/styles/doktor.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="473">
-                  <caret line="317" column="16" selection-start-line="317" selection-start-column="4" selection-end-line="317" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fhUbahDokter.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/FormHandling/fhUbahDokter.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="81" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="addDokter.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pages/pimpinan/addDokter.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="56" column="24" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="fhDokter.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/FormHandling/fhDokter.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="323">
-                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="addJP.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dokter/addJP.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#2;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#3;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#p#1;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fhJP.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FormHandling/fhJP.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ubahJp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dokter/ubahJp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1853">
+              <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ubahDokter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/pimpinan/ubahDokter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="daftarpenanganan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dokter/daftarpenanganan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataDokter.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pages/viewData/dataDokter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hapusJp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/dokter/hapusJp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dataJadwalPraktek.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/viewData/dataJadwalPraktek.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="60" column="117" selection-start-line="60" selection-start-column="117" selection-end-line="60" selection-end-column="117" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tempPimpinan.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/pimpinan/tempPimpinan.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -193,16 +140,16 @@
         <option value="$PROJECT_DIR$/styles/doktor.js" />
         <option value="$PROJECT_DIR$/styles/main.css" />
         <option value="$PROJECT_DIR$/pages/pimpinan/addJP.php" />
-        <option value="$PROJECT_DIR$/pages/viewData/dataDokter.php" />
-        <option value="$PROJECT_DIR$/pages/dokter/daftarpenanganan.php" />
         <option value="$PROJECT_DIR$/pages/dokter/addJP.php" />
         <option value="$PROJECT_DIR$/FormHandling/fhJP.php" />
         <option value="$PROJECT_DIR$/pages/viewData/dataJadwalPraktek.php" />
-        <option value="$PROJECT_DIR$/styles/doktor.css" />
         <option value="$PROJECT_DIR$/FormHandling/fhUbahJP.php" />
         <option value="$PROJECT_DIR$/pages/dokter/ubahJp.php" />
         <option value="$PROJECT_DIR$/FormHandling/fhUbahDokter.php" />
         <option value="$PROJECT_DIR$/FormHandling/fhDokter.php" />
+        <option value="$PROJECT_DIR$/styles/doktor.css" />
+        <option value="$PROJECT_DIR$/pages/dokter/daftarpenanganan.php" />
+        <option value="$PROJECT_DIR$/pages/viewData/dataDokter.php" />
       </list>
     </option>
   </component>
@@ -311,12 +258,12 @@
       <updated>1524922128678</updated>
       <workItem from="1524922131276" duration="975000" />
       <workItem from="1524923257464" duration="30713000" />
-      <workItem from="1524992824677" duration="30567000" />
+      <workItem from="1524992824677" duration="31860000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62255000" />
+    <option name="totallyTimeSpent" value="63548000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,15 +275,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="676" y="0" width="697" height="735" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.33333334" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3250825" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32838285" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2246596" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2244898" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
@@ -350,27 +298,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2246596" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24960753" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.33333334" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
-      <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32838285" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.3250825" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -540,45 +467,31 @@
     <entry file="file://$PROJECT_DIR$/pages/dokter/aturJadwalPraktek.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/dokter/daftarpenanganan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/viewData/dataDokter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/dokter/hapusJp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/pimpinan/tempPimpinan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="20" selection-end-column="65" />
+        <state relative-caret-position="425">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FormHandling/fhJP.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="33" column="47" lean-forward="true" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/dokter/addJP.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="63" column="20" lean-forward="true" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -590,13 +503,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/doktor.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="317" column="16" selection-start-line="317" selection-start-column="4" selection-end-line="317" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/viewData/dataJadwalPraktek.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -604,10 +510,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dokter/ubahJp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="119" column="9" selection-start-line="119" selection-start-column="9" selection-end-line="119" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/pimpinan/ubahDokter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-816">
-          <caret line="24" column="107" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="107" />
+        <state relative-caret-position="19">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -618,10 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/dokter/ubahJp.php">
+    <entry file="file://$PROJECT_DIR$/styles/doktor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="55" column="114" selection-start-line="55" selection-start-column="114" selection-end-line="55" selection-end-column="114" />
+        <state relative-caret-position="439">
+          <caret line="338" column="16" selection-start-line="338" selection-start-column="16" selection-end-line="338" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -641,8 +554,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/FormHandling/fhDokter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="153">
+          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/dokter/daftarpenanganan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/viewData/dataDokter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
         </state>
       </provider>
     </entry>
