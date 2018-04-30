@@ -16,12 +16,11 @@
             <h1>Daftar Catatan Pasien</h1>
             <!-- tambah search boxuntuk nyari nama pasien-->
             <label>Cari nama pasien:</label>
-            <form id="searchbox" action="" method="post">
+            <form id="searchbox" action="fhsearchpasien" method="post">
                 <input type="text" name="carinamaP" style="width:300px;"/>
                 <button type="submit" name="search" class="searchbutton">
                     <img src="../../img/searchicon.png" style="width:30px; height: 30px;"/>
                 </button>
-
             </form>
             <table border="1" width="100%">
                 <tr>
