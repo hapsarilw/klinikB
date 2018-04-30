@@ -30,9 +30,6 @@
 
                 $query = "SELECT * FROM pasien";
                 $sql = mysqli_query($conn, $query); 
-                
-                $query2 = "select * from hasil_konsultasi";
-                $sql2 = mysqli_query($conn, $query2);
 
                 while($data = mysqli_fetch_array($sql)){
                     echo "<tr>";
