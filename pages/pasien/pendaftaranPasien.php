@@ -24,7 +24,7 @@
                 <input type="text" name="namaP" value="" required><br>
 
                 E-mail: <br>
-                <input type="text" name="emailP" value="" required><br>
+                <input type="email" name="emailP" value="" required><br>
 
                 No. telepon: <br>
                 <input type="text" name="noTelp" value="" required><br>
