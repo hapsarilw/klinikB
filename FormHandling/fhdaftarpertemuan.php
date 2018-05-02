@@ -12,15 +12,16 @@ $namaD = $_POST['namaD'];
 $hari = $_POST['hari'];
 $jam = $_POST['jam'];
 
-$query = "INSERT INTO pasien(nama_pasien, email, noTelp) 
-              VALUES('".$namaP."','".$emailP."','".$noTelp."')";
 
+
+$query = "INSERT INTO pasien(nama_pasien, email, noTelp) 
+              VALUES('".$namaP."','".$emailP."','".$noTelp."' ";
 $sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
 
 $query2 = "SELECT id_karyawan FROM karyawan where nama_karyawan = '".$namaD."'";
 $sql2 = mysqli_query($conn, $query2) or die(mysqli_error($conn));
 
-$query3 = "SELECT id_pasien from pasien where nama_pasien = '".$namaP."'";
+$query3 = "SELECT id_pasien from pasien where nama_pasien = '".$namaP."' ";
 $sql3 = mysqli_query($conn, $query3) or die(mysqli_error($conn));
 
 $query4 = "INSERT INTO pertemuan_dokterpasien(id_karyawan, id_pasien, hari, jam_pertemuan) VALUES(".$query2.", ".$query3.", '".$hari."', '".$jam."')";
