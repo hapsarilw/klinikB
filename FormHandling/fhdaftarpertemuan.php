@@ -23,7 +23,7 @@ $sql2 = mysqli_query($conn, $query2) or die(mysqli_error($conn));
 $query3 = "SELECT id_pasien from pasien where nama_pasien = '".$namaP."'";
 $sql3 = mysqli_query($conn, $query3) or die(mysqli_error($conn));
 
-$query4 = "INSERT INTO pertemuan_dokterpasien(id_karyawan, id_pasien, hari, jam_pertemuan) VALUES('".$query2."', '".$query3."', '".$hari."', '".$jam."')";
+$query4 = "INSERT INTO pertemuan_dokterpasien(id_karyawan, id_pasien, hari, jam_pertemuan) VALUES(".$query2.", ".$query3.", '".$hari."', '".$jam."')";
 $sql4 = mysqli_query($conn, $query4) or die(mysqli_error($conn));
 
 if($sql4){ 

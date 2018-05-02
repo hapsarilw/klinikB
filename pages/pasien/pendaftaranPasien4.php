@@ -38,7 +38,7 @@ echo "<input type=text value='$namaD' name='jenisSp' style='display:none'>";
                     <option value="none">None</option>
                     <?php
 
-                    $query = "SELECT hari FROM viewjpdokter where nama_karyawan = '$namaD'"; 
+                    $query = "SELECT hari FROM praktekdokter where nama_karyawan = '$namaD'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 

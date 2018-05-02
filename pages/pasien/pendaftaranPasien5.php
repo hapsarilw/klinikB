@@ -42,14 +42,14 @@ echo "<input type=text value='$hari' name='hari' style='display:none'>";
                     <option value="none">None</option>
                     <?php
 
-                    $query = "SELECT jam_mulai, jam_selesai FROM viewjpdokter where hariPertemuan = '$hari'"; 
+                    $query = "SELECT jam_mulai, jam_selesai FROM viewjpdokter where hari = '$hari' and nama_karyawan = '$namaD'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        $data1 = $data['jam_mulai'];
-                        $data2 = $data['jam_selesai'];
-                        $jam = $data1.'-'.$data2;
-                        echo "<option value=''>".$jam."</option>";
+//                        $data1 = $data['jam_mulai'];
+//                        $data2 = $data['jam_selesai'];
+//                        $jam = $data1.'-'.$data2;
+                        echo "<option value=''>".$data['jam_mulai']."</option>";
                     }
                     ?>
                     <input type=text id="jam" name="jam" value="" style="display:none">

@@ -41,10 +41,10 @@ echo "<input type=text value='$noTelp' name='noTelp' style='display:none'>";
                         echo "<option value='".$data['jenis_spesialisasi']."' name='".$data['jenis_spesialisasi']."'>".$data['jenis_spesialisasi']."</option>";
                     }
                     ?>
-                    <input type=text id="jenisSp" name="jenisSp" value="" >
-                    <input type=text value='<?php echo $namaP?>' name='namaP' >
-                    <input type=text value='<?php echo $emailP?>' name='emailP' >
-                    <input type=text value='<?php echo $noTelp?>' name='noTelp' >
+                    <input type=text id="jenisSp" name="jenisSp" value="" style="display:none">
+                    <input type=text value='<?php echo $namaP?>' name='namaP' style="display:none">
+                    <input type=text value='<?php echo $emailP?>' name='emailP' style="display:none">
+                    <input type=text value='<?php echo $noTelp?>' name='noTelp' style="display:none">
                 </select>
                 <br>
                 <input type="submit" class="button" style="width:75px;" value="Lanjut">
