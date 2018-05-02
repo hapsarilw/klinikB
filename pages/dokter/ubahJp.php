@@ -22,8 +22,10 @@
     <?php
 
     // Ambil data NIS yang dikirim oleh index.php melalui URL
-    $idK = $_SESSION['idK'];
+    $idK = $_GET['id_karyawan'];
     $idJP = $_GET['id_jadwalPraktek'];
+
+
 
     // Query untuk menampilkan data siswa berdasarkan NIS yang dikirim
 
@@ -32,9 +34,10 @@
     <table id="jadwalPraktek1">
         <tr>
             <?php
-                $query2 = "SELECT * FROM praktekdokter WHERE id_jadwalPraktek='".$idJP."' ";
+                $query2 = "SELECT * FROM praktekdokter WHERE id_jadwalPraktek=$idJP ";
                 $sql2 = mysqli_query($conn, $query2);  // Eksekusi/Jalankan query dari variabel $query
                 $data2 = mysqli_fetch_array($sql2); // Ambil data dari hasil eksekusi $sql
+
             ?>
             <th align="left">Hari Praktek Saat Ini</th>
             <td> : <?php echo ucfirst($data2['hari']); ?></td>
@@ -50,19 +53,21 @@
         </tr>
     </table>
     <h4>Jadwal Baru</h4>
-    <form method="post" action="../../FormHandling/fhUbahJP.php?id_jadwalPraktek=<?php $data2['id_jadwalPraktek']?>&
-id_karyawan=<?php $data2['id_karyawan']?>" enctype="multipart/form-data">
-
+    <form method="get" action="../../FormHandling/fhUbahJP.php?" enctype="multipart/form-data">
+        <?php
+        $idK = $_GET['id_karyawan'];
+        $idJP = $_GET['id_jadwalPraktek'];
+        ?>
+        <table id="jadwalPraktek">
+        </table>
         <table id="jadwalPraktek">
             <tr>
-                <th colspan="3">Jadwal Praktek</th>
+                <th colspan="2">JadwalPraktek</th>
             </tr>
             <tr>
-                <td rowspan="2">1</td>
-                <td>Hari</td>
+                <td colspan="1">Hari</td>
                 <td>
-                    <label for='hari[]'></label><br>
-                    <select name="hari[]">
+                    <select name="hari">
                         <option value="senin">Senin</option>
                         <option value="selasa">Selasa</option>
                         <option value="rabu">Rabu</option>
@@ -75,10 +80,9 @@ id_karyawan=<?php $data2['id_karyawan']?>" enctype="multipart/form-data">
 
             </tr>
             <tr>
-                <td>Jam</td>
+                <td colspan="1">Jam</td>
                 <td>
-                    <label for='jam[]'></label><br>
-                    <select name="jam[]">
+                    <select name="jam">
                         <option value="10.00">10.00</option>
                         <option value="10.30">10.30</option>
                         <option value="11.00">11.00</option>
@@ -97,7 +101,20 @@ id_karyawan=<?php $data2['id_karyawan']?>" enctype="multipart/form-data">
                         <option value="17.30">17.30</option>
                     </select>
                 </td>
-
+            </tr>
+            <tr>
+                <td>ID Karyawan</td>
+                <td><select name="id_karyawan" id="">
+                        <option selected="true" value="<?php echo "$idK"?>"><?php echo "$idK"?></option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>ID  Jadwal Praktek</td>
+                <td><select name="id_jadwalPraktek" id="">
+                        <option selected="true" value="<?php echo "$idJP"?>"><?php echo "$idJP"?></option>
+                    </select>
+                </td>
             </tr>
         </table>
 
@@ -109,6 +126,7 @@ id_karyawan=<?php $data2['id_karyawan']?>" enctype="multipart/form-data">
     </form>
 </div>
 </body>
+
 </html>
 <script type="text/javascript" language="javascript">
     $(function() {
