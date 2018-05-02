@@ -8,9 +8,9 @@
     </head>
     <body>
         <div class="topnav">
-            <a href="daftarpenanganan.php">Daftar Penanganan</a>
-            <a href="aturJadwalPraktek.php">Atur Jadwal</a>
-            <a class="active" href="daftarcatatanpasien.php">Daftar Catatan Pasien</a>
+            <a href="daftarpenanganan.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Penanganan</a>
+            <a href="../viewData/dataJadwalPraktek.php?id_karyawan=<?php echo $_SESSION['idK']?>">Atur Jadwal</a>
+            <a class="active" href="daftarcatatanpasien.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Catatan Pasien</a>
         </div>
         <div class="content" >
             <h1>Tambah Catatan Pasien</h1>
