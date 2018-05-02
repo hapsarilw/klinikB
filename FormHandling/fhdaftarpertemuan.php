@@ -33,9 +33,10 @@ if($data0[0] == "N") {
 
 //    var_dump($sql2);
 
-    $query3 = "SELECT id_pasien from pasien where nama_pasien='".$namaP."'";
-    $sql3 = mysqli_query($conn, $query3) or die(mysqli_error($conn));
-    $data3 = mysqli_fetch_array($sql3);
+    
+$query3 = "SELECT id_pasien from pasien where nama_pasien='".$namaP."'";
+$sql3 = mysqli_query($conn, $query3) or die(mysqli_error($conn));
+$data3 = mysqli_fetch_array($sql3);
 
 
     $query4 = "INSERT INTO pertemuan_dokterpasien(id_karyawan, id_pasien, hari, jam_pertemuan) VALUES('".$data2['id_karyawan']."', '".$data3['id_pasien']."', '".$hari."', '".$jam."')";
