@@ -10,7 +10,7 @@ $noTelp = $_POST['telpP'];
 
 $query = "INSERT INTO pasien(nama_pasien, email, noTelp) 
               VALUES('".$namaP."','".$emailP."','".$noTelp."')";
-$sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
+//$sql = mysqli_query($conn, $query) or die(mysqli_error($conn));
 if($sql){ 
     header("location: ../pages/pasien/pendaftaranpasien2.php");
     exit();
