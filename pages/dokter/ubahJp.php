@@ -13,10 +13,9 @@
 </head>
 <body>
 <div class="topnav">
-    <a href="../viewData/dataStatistik.php">Statistik Klinik</a>
-    <a class="active" href="../viewData/dataDokter.php">Dokter</a>
-    <a href="../viewData/dataPasien.php">Pasien</a>
-    <a href="../dokter/daftarCatatan.php">Cari Data</a>
+    <a href="daftarpenanganan.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Penanganan</a>
+    <a class="active"  href="../viewData/dataJadwalPraktek.php?id_karyawan=<?php echo $_SESSION['idK']?>">Atur Jadwal</a>
+    <a href="daftarcatatanpasien.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Catatan Pasien</a>
 </div>
 <div class="content">
     <h1>Ubah Jadwal Praktek</h1>
@@ -33,7 +32,7 @@
     <table id="jadwalPraktek1">
         <tr>
             <?php
-                $query2 = "SELECT * FROM jadwal_praktek WHERE id_jadwalPraktek='".$idJP."'";
+                $query2 = "SELECT * FROM praktekdokter WHERE id_jadwalPraktek='".$idJP."' ";
                 $sql2 = mysqli_query($conn, $query2);  // Eksekusi/Jalankan query dari variabel $query
                 $data2 = mysqli_fetch_array($sql2); // Ambil data dari hasil eksekusi $sql
             ?>
@@ -51,7 +50,8 @@
         </tr>
     </table>
     <h4>Jadwal Baru</h4>
-    <form method="post" action="../../FormHandling/fhUbahJP.php?id_jadwalPraktek=<?php echo $data2['id_jadwalPraktek']?>" enctype="multipart/form-data">
+    <form method="post" action="../../FormHandling/fhUbahJP.php?id_jadwalPraktek=<?php $data2['id_jadwalPraktek']?>&
+id_karyawan=<?php $data2['id_karyawan']?>" enctype="multipart/form-data">
 
         <table id="jadwalPraktek">
             <tr>
@@ -72,6 +72,7 @@
                         <option value="minggu">Minggu</option>
                     </select>
                 </td>
+
             </tr>
             <tr>
                 <td>Jam</td>
@@ -96,6 +97,7 @@
                         <option value="17.30">17.30</option>
                     </select>
                 </td>
+
             </tr>
         </table>
 

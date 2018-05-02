@@ -57,13 +57,15 @@
         $query = "SELECT * FROM praktekdokter where id_karyawan = ".$idK." ";
         $sql = mysqli_query($conn, $query);
 
-        while($data = mysqli_fetch_array($sql)){ 
+        while($data = mysqli_fetch_array($sql)){
             echo "<tr>";
+            $idJP = $data['id_jadwalPraktek'];
             echo "<td>".$data['hari']."</td>";
             echo "<td>".$data['jam_mulai']."</td>";
             echo "<td>".$data['jam_selesai']."</td>";
-            echo "<td><a href='../dokter/ubahJP.php?id_karyawan=".$data['id_karyawan']." && id_jadwalPraktek=".$data2['id_jadwalPraktek']."'>Ubah</a></td>";
-            echo "<td><a href='../dokter/hapusJP.php?id_karyawan=".$data['id_karyawan']."&& id_jadwalPraktek=".$data2['id_jadwalPraktek']."'>Hapus</a></td>";
+
+            echo "<td><a href='../dokter/ubahJp.php?id_jadwalPraktek=$idJP&id_karyawan=$idK'>Ubah</a></td>";
+            echo "<td><a href='../dokter/hapusJp.php?id_jadwalPraktek=$idJP&id_karyawan=$idK'>Hapus</a></td>";
             echo "</tr>";
         }
         ?>

@@ -13,10 +13,9 @@
 </head>
 <body>
 <div class="topnav">
-    <a href="dataStatistik.php">Statistik Klinik</a>
-    <a class="active" href="dataDokter.php">Dokter</a>
-    <a href="dataPasien.php">Pasien</a>
-    <a href="">Cari Data</a>
+    <a href="daftarpenanganan.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Penanganan</a>
+    <a class="active" href="../viewData/dataJadwalPraktek.php?id_karyawan=<?php echo $_SESSION['idK']?>">Atur Jadwal</a>
+    <a href="daftarcatatanpasien.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Catatan Pasien</a>
 </div>
 <div class="content">
     <h1>Tambah Jadwal Praktek</h1>

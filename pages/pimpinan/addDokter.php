@@ -16,7 +16,7 @@
         </div>
         <div class="content">
             <h1>Tambah Data Dokter</h1>
-            <form method="post" action="../../FormHandling/fhDokter.php" enctype="multipart/form-data">
+            <form method="post" action="../../FormHandling/fhDokter.php=" enctype="multipart/form-data">
                 <table cellpadding="8">
                     <tr>
                         <td>Nama Karyawan</td>
