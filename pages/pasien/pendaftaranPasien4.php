@@ -10,7 +10,7 @@ echo "<input type=text value='$namaP' name='namaP' style='display:none'>";
 echo "<input type=text value='$emailP' name='emailP' style='display:none'>";
 echo "<input type=text value='$noTelp' name='noTelp' style='display:none'>";
 echo "<input type=text value='$jenisSp' name='jenisSp' style='display:none'>";
-echo "<input type=text value='$namaD' name='jenisSp' style='display:none'>";
+echo "<input type=text value='$namaD' name='namaD' style='display:none'>";
 ?>
 <html lang="en">
     <head>
@@ -34,18 +34,19 @@ echo "<input type=text value='$namaD' name='jenisSp' style='display:none'>";
             <h1>Form Pendaftaran Pasien</h1>
             <form action="pendaftaranpasien5.php" method="post">
                 Hari Pertemuan: <br>
-                <select id="hari_pertemuan" name="hariPertemuan" required>
-                    <option value="none">None</option>
+                <select id="hari_pertemuan" name="hariPertemuan" onChange="apaun(this)" required>
+                    <option value="none" selected=true disabled>None</option>
                     <?php
 
                     $query = "SELECT hari FROM praktekdokter where nama_karyawan = '$namaD'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        echo "<option value=''>".$data['hari']."</option>";
+                        $hari = $data['hari'];
+                        echo "<option value='".$hari."'>".$hari."</option>";
                     }
                     ?>
-                    <input type=text id="hari" name="hari" value=""  style="display:none">
+                    <input type=text id="hari" name="hari" value="<?php echo $hari?>"  style="display:none">
                     <input type=text value='<?php echo $namaP?>' name='namaP' style='display:none'>
                     <input type=text value='<?php echo $emailP?>' name='emailP' style='display:none'>
                     <input type=text value='<?php echo $noTelp?>' name='noTelp' style='display:none'>

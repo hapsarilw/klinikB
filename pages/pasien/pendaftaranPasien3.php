@@ -34,17 +34,18 @@ echo "<input type=text value='$jenisSp' name='jenisSp' style='display:none'>";
                 Nama Dokter: <br>
 
                 <select id="namadok" name="namadok" onChange="apaun(this)" required>
-                    <option value="none">None</option>
+                    <option value="none" selected=true disabled>None</option>
                     <?php
 
                     $query = "SELECT nama_karyawan FROM viewspesialisasidokter where jenis_spesialisasi = '$jenisSp'"; 
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        echo "<option value='".$data['nama_karyawan']."'>".$data['nama_karyawan']."</option>";
+                        $namaK = $data['nama_karyawan'];
+                        echo "<option value='".$namaK."'>".$namaK."</option>";
                     }
                     ?>
-                    <input type=text id="namaD" name="namaD" value=""  style="display:none">
+                    <input type=text id="namaD" name="namaD" value="<?php echo $namaK?>"  style="display:none">
                     <input type=text value='<?php echo $namaP?>' name='namaP' style='display:none'>
                     <input type=text value='<?php echo $emailP?>' name='emailP' style='display:none'>
                     <input type=text value='<?php echo $noTelp?>' name='noTelp' style='display:none'>

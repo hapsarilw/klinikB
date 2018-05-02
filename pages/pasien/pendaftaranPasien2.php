@@ -38,7 +38,8 @@ echo "<input type=text value='$noTelp' name='noTelp' style='display:none'>";
                     $sql = mysqli_query($conn, $query); 
 
                     while($data = mysqli_fetch_array($sql)){ 
-                        echo "<option value='".$data['jenis_spesialisasi']."' name='".$data['jenis_spesialisasi']."'>".$data['jenis_spesialisasi']."</option>";
+                        $jenisSp = $data['jenis_spesialisasi'];
+                        echo "<option value='".$jenisSp."' name='".$jenisSp."'>".$jenisSp."</option>";
                     }
                     ?>
                     <input type=text id="jenisSp" name="jenisSp" value="" style="display:none">

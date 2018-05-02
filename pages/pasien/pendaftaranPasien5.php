@@ -38,27 +38,30 @@ echo "<input type=text value='$hari' name='hari' style='display:none'>";
             <form action="../../formhandling/fhdaftarpertemuan.php" method="post">
 
                 Jam Pertemuan: <br>
-                <select id="jam" name="jam" required>
-                    <option value="none">None</option>
+                <select id="jam" name="jam" onChange="apaun(this)" required>
+                    <option value="none" selected=true disabled>None</option>
                     <?php
 
-                    $query = "SELECT jam_mulai, jam_selesai FROM praktekdokter where hari = '$hari' and nama_karyawan = '$namaD'"; 
+                    $query = "SELECT jam_mulai, jam_selesai FROM praktekdokter where hari ='".$hari."' and nama_karyawan = '".$namaD."'"; 
                     $sql = mysqli_query($conn, $query); 
-                    
-                    while($data = mysqli_fetch_array($sql)){                         
-                        $data1 = $data['jam_mulai'];
-                        $data2 = $data['jam_selesai'];
-                        $jam = $data1.'-'.$data2;                        
-                        echo "<option value=''>".$jam."</option>";
+
+                    while($data = mysqli_fetch_array($sql)){                       
+                        $jamMulai = $data['jam_mulai'];
+                        $jamSelesai = $data['jam_selesai'];
+                        $jam = $jamMulai.'-'.$jamSelesai;                        
+                        echo "<option value='".$jam."'>".$jam."</option>";
+                        echo "<input type=text value='".$jamMulai."' name='jamMulai' style='display:none'>";
+                        echo "<input type=text value='".$jamSelesai."' name='jamSelesai' style='display:none'>";
                     }
                     ?>
-                    <input type=text id="jam" name="jam" value="" style="display:none">
+                    <input type=text id="jam" name="jam" value="<?php echo $jam?>" style="display:none">
                     <input type=text value='<?php echo $namaP?>' name='namaP' style='display:none'>
                     <input type=text value='<?php echo $emailP?>' name='emailP' style='display:none'>
                     <input type=text value='<?php echo $noTelp?>' name='noTelp' style='display:none'>
                     <input type=text value='<?php echo $jenisSp?>' name='jenisSp' style='display:none'>
                     <input type=text value='<?php echo $namaD?>' name='namaD' style='display:none'>
                     <input type=text value='<?php echo $hari?>' name='hari' style='display:none'>
+
                 </select>
                 <br><br>
                 <input type="submit" class="button" style="width:75px;" value="Lanjut">

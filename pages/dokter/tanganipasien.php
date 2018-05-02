@@ -21,7 +21,7 @@
                     <!--
 <th>Email</th>
 <th>No. Telepon</th>
--->
+-->                 
                     <th>Hari Pertemuan</th>
                     <th>Jam Pertemuan</th>
                     <th>Status Penanganan</th>
@@ -38,15 +38,15 @@
                    echo "<tr>";
                    echo "<td>".$data['id_pasien']."</td>";
                    echo "<td>".$data['nama_pasien']."</td>";
-                   echo "<td>".$data['hari']."</td>";
-                   echo "<td>".$data['jam_pertemuan']."</td>";
+                   //                   echo "<td>".$data['email']."</td>";
+                   //                   echo "<td>".$data['noTelp']."</td>";
                    $getStatus = $data['statusPenanganan'];
                    if($getStatus == 'N') {
                        $statusBelum = 'Belum ditangani';
                        echo "<td>".$statusBelum."</td>";
                    }
 
-                   echo "<td><a href='../pimpinan/ubahPasien.php?id_pasien=".$data['id_pasien']."'>Tangani</a></td>";
+                   echo "<td><a href='../pimpinan/ubahPasien.php?id_pasien=".$data['id_pasien']."&nama_pasien=".$data['nama_pasien']"'>Tangani</a></td>";
                    echo "</tr>";
                }
                 ?>
