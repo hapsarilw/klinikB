@@ -36,7 +36,7 @@ echo "<input type=text value='$jenisSp' name='jenisSp' style='display:none'>";
                 <select id="namadok" name="namadok" onChange="apaun(this)" required>
                     <option value="none" selected=true disabled>None</option>
                     <?php
-
+                    
                     $query = "SELECT nama_karyawan FROM viewspesialisasidokter where jenis_spesialisasi = '$jenisSp'"; 
                     $sql = mysqli_query($conn, $query); 
 

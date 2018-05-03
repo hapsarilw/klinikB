@@ -30,7 +30,7 @@
         // Load file koneksi.php
         include "../../dbConnect.php";
 
-        $query = "SELECT id_karyawan, nama_karyawan, email, password, jenis_spesialisasi FROM viewspesialisasidokter";
+        $query = "SELECT id_karyawan, nama_karyawan, email, password, id_spesialisasi FROM karyawan where jabatan='Dokter'";
         $sql = mysqli_query($conn, $query);
 
         while($data = mysqli_fetch_array($sql)){
@@ -40,7 +40,7 @@
             echo "<td>".$data['nama_karyawan']."</td>";
             echo "<td>".$data['email']."</td>";
             echo "<td>".$data['password']."</td>";
-            echo "<td>".$data['jenis_spesialisasi']."</td>";
+            echo "<td>".$data['id_spesialisasi']."</td>";
             echo "<td><a href='../pimpinan/ubahDokter.php?id_karyawan=".$data['id_karyawan']."'>Ubah</a></td>";
             echo "<td><a href='../pimpinan/hapusDokter.php?id_karyawan=".$data['id_karyawan']."'>Hapus</a></td>";
             echo "</tr>";
