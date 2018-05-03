@@ -13,44 +13,58 @@
             <a href="daftarcatatanpasien.php?id_karyawan=<?php echo $_SESSION['idK']?>">Daftar Catatan Pasien</a>
         </div>
         <div class="content" >
-            <h1>Daftar Penanganan</h1>
-            <table border="1" width="100%">
-                <tr>
-                    <th>ID Pasien</th>
-                    <th>Nama</th>
-                    <!--
-<th>Email</th>
-<th>No. Telepon</th>
--->                 
-                    <th>Hari Pertemuan</th>
-                    <th>Jam Pertemuan</th>
-                    <th>Status Penanganan</th>
-                    <th>Aksi</th>
-                </tr>
-                <?php
+            <h1>Form Penanganan Pasien</h1>
+
+            <?php
     // Load file koneksi.php
     include "../../dbConnect.php";
                $idK = $_SESSION['idK'];
+               $idP = $_GET['id_pasien'];
+               $namaK = $_GET['nama_karyawan'];
+               $id_pertemuan = $_GET['id_pertemuan'];
 
-               $query = "select * from viewnamapasien where id_karyawan='.$idK.' && statusPenanganan='N'";
+               $query = "select * from viewnamapasien where id_karyawan='".$idK."' and statusPenanganan='N' and id_pasien='".$idP."'";
                $sql = mysqli_query($conn, $query);
-               while($data = mysqli_fetch_array($sql)){
-                   echo "<tr>";
-                   echo "<td>".$data['id_pasien']."</td>";
-                   echo "<td>".$data['nama_pasien']."</td>";
-                   //                   echo "<td>".$data['email']."</td>";
-                   //                   echo "<td>".$data['noTelp']."</td>";
-                   $getStatus = $data['statusPenanganan'];
-                   if($getStatus == 'N') {
-                       $statusBelum = 'Belum ditangani';
-                       echo "<td>".$statusBelum."</td>";
-                   }
-
-                   echo "<td><a href='../pimpinan/ubahPasien.php?id_pasien=".$data['id_pasien']."&nama_pasien=".$data['nama_pasien']"'>Tangani</a></td>";
-                   echo "</tr>";
+               while($data = mysqli_fetch_array($sql)) {
+                   $namaP = $data['nama_pasien'];
+                   $hari = $data['hari'];
+                   $jam = $data['jam_pertemuan'];
                }
-                ?>
-            </table>
+
+            ?>
+            <form method="post" action="../../formhandling/fhaddkonsultasi.php?id_pasien=<?php echo $idP;?>&id_karyawan=<?php echo $idK;?>" enctype="multipart/form-data">
+                <table cellpadding="8">
+                    <tr>
+                        <td>ID Pertemuan</td>
+                        <td><input type="text" name="id_pertemuan" value="<?php echo $id_pertemuan; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Pasien</td>
+                        <td><input type="text" name="nama_pasien" value="<?php echo $namaP; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Nama Dokter</td>
+                        <td><input type="text" name="nama_karyawan" value="<?php echo $namaK; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Hari Pertemuan</td>
+                        <td><input type="text" name="hari" value="<?php echo $hari; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Jam Pertemuan</td>
+                        <td><input type="text" name="jam" value="<?php echo $jam; ?>"></td>
+                    </tr>
+                    <tr>
+                        <td>Isi Catatan</td>
+                        <td><textarea name="isi_catatan" value="" style="height:150px; width:300px"></textarea></td>
+                    </tr>
+
+                </table>
+
+                <hr>
+                <input type="submit" value="Tangani">
+                <a href="daftarpenanganan.php"><input type="button" value="Batal"></a>
+            </form>
         </div>
 
     </body>

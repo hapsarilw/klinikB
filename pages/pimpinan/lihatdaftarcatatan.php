@@ -28,12 +28,12 @@
                 // Load file koneksi.php
                 include "../../dbConnect.php";
 
-                $query = "SELECT * FROM #"; //table view joinan hasil konsultasi, dokter, pasien
+                $query = "SELECT * FROM hasil_konsultasi"; //table view joinan hasil konsultasi, dokter, pasien
                 $sql = mysqli_query($conn, $query);
 
                 while($data = mysqli_fetch_array($sql)){ 
                     echo "<tr>";
-                    echo "<td>".$data['']."</td>";
+                    echo "<td>".$data['id_konsultasi']."</td>";
                     echo "<td>".$data['']."</td>";
                     echo "<td>".$data['']."</td>";
                     echo "<td>".$data['']."</td>";

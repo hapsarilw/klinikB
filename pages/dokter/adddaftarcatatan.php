@@ -14,39 +14,38 @@
         </div>
         <div class="content" >
             <h1>Tambah Catatan Pasien</h1>
-                        <form method="post" action="../../FormHandling/fhDokter.php" enctype="multipart/form-data">
+            <form method="post" action="../../formhandling/fhaddkonsultasi.php?id_pasien=<?php echo $idP;?>&id_karyawan=<?php echo $idK;?>" enctype="multipart/form-data">
                 <table cellpadding="8">
                     <tr>
+                        <td>ID Pertemuan</td>
+                        <td><input type="text" name="id_pertemuan" value=""></td>
+                    </tr>
+                    <tr>
                         <td>Nama Pasien</td>
-                        <td><input type="text" name="nama_pasien"></td>
+                        <td><input type="text" name="nama_pasien" value=""></td>
                     </tr>
                     <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="email"></td>
+                        <td>Nama Dokter</td>
+                        <td><input type="text" name="nama_karyawan" value=""></td>
                     </tr>
                     <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password"></td>
+                        <td>Hari Pertemuan</td>
+                        <td><input type="text" name="hari" value=""></td>
                     </tr>
                     <tr>
-                        <td>Nama Spesialisasi</td>
-                        <td>
-                            <input type="radio" name="nama_spesialisasi" value="Gigi dan Mulut"> Gigi dan Mulut
-                            <input type="radio" name="nama_spesialisasi" value="Kandungan"> Kandungan
-                            <input type="radio" name="nama_spesialisasi" value="Penyakit Dalam"> Penyakit Dalam
-                            <input type="radio" name="nama_spesialisasi" value="Tulang"> Tulang
-                            <input type="radio" name="nama_spesialisasi" value="Umum"> Umum
-                        </td>
+                        <td>Jam Pertemuan</td>
+                        <td><input type="text" name="jam" value=""></td>
                     </tr>
                     <tr>
-                        <td>Foto</td>
-                        <td><input type="file" name="foto"></td>
+                        <td>Isi Catatan</td>
+                        <td><textarea name="isi_catatan" value="" style="height:150px; width:300px"></textarea></td>
                     </tr>
+
                 </table>
 
                 <hr>
-                <input type="submit" value="Simpan">
-                <a href="../viewData/dataDokter.php"><input type="button" value="Batal"></a>
+                <input type="submit" value="Tangani">
+                <a href="daftarpenanganan.php"><input type="button" value="Batal"></a>
             </form>
         </div>
     </body>

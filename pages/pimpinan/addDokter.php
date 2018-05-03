@@ -33,11 +33,15 @@
                     <tr>
                         <td>Nama Spesialisasi</td>
                         <td>
-                            <input type="radio" name="nama_spesialisasi" value="Gigi dan Mulut"> Gigi dan Mulut
-                            <input type="radio" name="nama_spesialisasi" value="Kandungan"> Kandungan
-                            <input type="radio" name="nama_spesialisasi" value="Penyakit Dalam"> Penyakit Dalam
-                            <input type="radio" name="nama_spesialisasi" value="Tulang"> Tulang
-                            <input type="radio" name="nama_spesialisasi" value="Umum"> Umum
+                            <?php
+                            include '../../dbconnect.php';
+                            $query = "select * from spesialisasi";
+                            $sql = mysqli_query($conn, $query);
+                            while($data = mysqli_fetch_array($sql)) {
+                                $jenisSp = $data['jenis_spesialisasi'];
+                                echo "<input type='radio' name='".$jenisSp."' value='".$jenisSp."'>".$jenisSp."<br>";
+                            }
+                            ?>
                         </td>
                     </tr>
 
@@ -50,10 +54,6 @@
                         </td>
                     </tr>
 -->
-                    <tr>
-                        <td>Foto</td>
-                        <td><input type="file" name="foto"></td>
-                    </tr>
                 </table>
 
                 <hr>

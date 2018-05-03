@@ -31,8 +31,13 @@
     // Load file koneksi.php
     include "../../dbConnect.php";
                $idK = $_SESSION['idK'];
+               
+               $query0 = "select nama_karyawan from karyawan where id_karyawan = '".$idK."'";
+               $sql0 = mysqli_query($conn, $query0);
+               $data0 = mysqli_fetch_array($sql0);
+               $namaK = $data0[0];
 
-               $query = "select * from viewnamapasien where id_karyawan='.$idK.' && statusPenanganan='N'";
+               $query = "select * from viewnamapasien where id_karyawan='.$idK.' and statusPenanganan='N'";
                $sql = mysqli_query($conn, $query);
                while($data = mysqli_fetch_array($sql)){
                    echo "<tr>";
@@ -45,8 +50,8 @@
                        $statusBelum = 'Belum ditangani';
                        echo "<td>".$statusBelum."</td>";
                    }
-
-                   echo "<td><a href='../pimpinan/ubahPasien.php?id_pasien=".$data['id_pasien']."'>Tangani</a></td>";
+                   $id_pertemuan = $data['id_pertemuan'];
+                   echo "<td><a href='tanganipasien.php?id_pasien=".$data['id_pasien']."&nama_karyawan=".$namaK."&id_pertemuan=".$id_pertemuan."'>Tangani</a></td>";
                    echo "</tr>";
                }
                 ?>
