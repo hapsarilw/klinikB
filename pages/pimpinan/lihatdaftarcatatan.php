@@ -18,27 +18,25 @@
             <table border="1" width="100%">
                 <tr>
                     <th>ID Konsultasi</th>
-                    <th>Nama Pasien</th>
-                    <th>Nama Dokter</th>
+                    <th>ID Pasien</th>
+                    <th>ID Dokter</th>
                     <th>Waktu Perubahan</th>
                     <th>Status</th>
-                    <th>Lihat Catatan</th>
                 </tr>
                 <?php
                 // Load file koneksi.php
                 include "../../dbConnect.php";
 
-                $query = "SELECT * FROM hasil_konsultasi"; //table view joinan hasil konsultasi, dokter, pasien
+                $query = "SELECT * FROM viewpasienkonsultasi"; //table view joinan hasil konsultasi, dokter, pasien
                 $sql = mysqli_query($conn, $query);
 
                 while($data = mysqli_fetch_array($sql)){ 
                     echo "<tr>";
                     echo "<td>".$data['id_konsultasi']."</td>";
-                    echo "<td>".$data['']."</td>";
-                    echo "<td>".$data['']."</td>";
-                    echo "<td>".$data['']."</td>";
-                    echo "<td>".$data['']."</td>";
-                    echo "<td><a href=''".$data[''].">Lihat Catatan</a></td>";
+                    echo "<td>".$data['nama_pasien']."</td>";
+                    echo "<td>".$data['nama_karyawan']."</td>";
+                    echo "<td>".$data['waktu_perubahan']."</td>";
+                    echo "<td>".$data['idStatus']."</td>";
                     echo "</tr>";
                 }
                 ?>
